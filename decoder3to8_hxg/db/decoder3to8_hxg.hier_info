@@ -1,0 +1,46 @@
+|decoder3to8_hxg
+Y[0] <= Y0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => decoder2to4_hxgdly:inst5.SEL[0]
+A[0] => decoder2to4_hxgdly:inst1.SEL[0]
+A[1] => decoder2to4_hxgdly:inst5.SEL[1]
+A[1] => decoder2to4_hxgdly:inst1.SEL[1]
+A[2] => inst.IN0
+A[2] => inst4.IN0
+A[2] => inst6.IN0
+A[2] => inst2.IN0
+A[2] => inst7.IN0
+
+
+|decoder3to8_hxg|decoder2to4_hxgdly:inst5
+Y[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL[0] => inst.IN0
+SEL[0] => inst2.IN1
+SEL[0] => inst5.IN1
+SEL[1] => inst4.IN0
+SEL[1] => inst2.IN0
+SEL[1] => inst1.IN0
+
+
+|decoder3to8_hxg|decoder2to4_hxgdly:inst1
+Y[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL[0] => inst.IN0
+SEL[0] => inst2.IN1
+SEL[0] => inst5.IN1
+SEL[1] => inst4.IN0
+SEL[1] => inst2.IN0
+SEL[1] => inst1.IN0
+
+

@@ -1,0 +1,600 @@
+|uIR_hxgdly
+uIR_out[0] <= adapter:inst93.B
+uIR_out[1] <= adapter:inst94.B
+uIR_out[2] <= adapter:inst95.B
+uIR_out[3] <= adapter:inst96.B
+uIR_out[4] <= adapter:inst97.B
+uIR_out[5] <= adapter:inst98.B
+uIR_out[6] <= adapter:inst99.B
+uIR_out[7] <= adapter:inst100.B
+uIR_out[8] <= adapter:inst77.B
+uIR_out[9] <= adapter:inst78.B
+uIR_out[10] <= adapter:inst79.B
+uIR_out[11] <= adapter:inst80.B
+uIR_out[12] <= adapter:inst81.B
+uIR_out[13] <= adapter:inst82.B
+uIR_out[14] <= adapter:inst83.B
+uIR_out[15] <= adapter:inst84.B
+uIR_out[16] <= adapter:inst61.B
+uIR_out[17] <= adapter:inst62.B
+uIR_out[18] <= adapter:inst63.B
+uIR_out[19] <= adapter:inst64.B
+uIR_out[20] <= adapter:inst65.B
+uIR_out[21] <= adapter:inst66.B
+uIR_out[22] <= adapter:inst67.B
+uIR_out[23] <= adapter:inst68.B
+CLR => register8:inst51.CLR
+CLR => register8:inst52.CLR
+CLR => register8:inst53.CLR
+CLK => register8:inst51.CP_time
+CLK => register8:inst52.CP_time
+CLK => register8:inst53.CP_time
+WEN => register8:inst51.WEN
+WEN => register8:inst52.WEN
+WEN => register8:inst53.WEN
+uIR_in[0] => adapter:inst92.A
+uIR_in[1] => adapter:inst91.A
+uIR_in[2] => adapter:inst90.A
+uIR_in[3] => adapter:inst89.A
+uIR_in[4] => adapter:inst88.A
+uIR_in[5] => adapter:inst87.A
+uIR_in[6] => adapter:inst86.A
+uIR_in[7] => adapter:inst85.A
+uIR_in[8] => adapter:inst76.A
+uIR_in[9] => adapter:inst75.A
+uIR_in[10] => adapter:inst74.A
+uIR_in[11] => adapter:inst73.A
+uIR_in[12] => adapter:inst72.A
+uIR_in[13] => adapter:inst71.A
+uIR_in[14] => adapter:inst70.A
+uIR_in[15] => adapter:inst69.A
+uIR_in[16] => adapter:inst60.A
+uIR_in[17] => adapter:inst59.A
+uIR_in[18] => adapter:inst58.A
+uIR_in[19] => adapter:inst57.A
+uIR_in[20] => adapter:inst56.A
+uIR_in[21] => adapter:inst55.A
+uIR_in[22] => adapter:inst54.A
+uIR_in[23] => adapter:inst.A
+
+
+|uIR_hxgdly|adapter:inst68
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|register8:inst51
+Q[0] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst16.IN0
+CP_time => inst13.CLK
+CP_time => inst14.CLK
+CP_time => inst12.CLK
+CP_time => inst11.CLK
+CP_time => inst6.CLK
+CP_time => inst7.CLK
+CP_time => inst8.CLK
+CP_time => inst10.CLK
+WEN => mux2_1:inst25.SEL
+WEN => mux2_1:inst24.SEL
+WEN => mux2_1:inst23.SEL
+WEN => mux2_1:inst21.SEL
+WEN => mux2_1:inst20.SEL
+WEN => mux2_1:inst19.SEL
+WEN => mux2_1:inst18.SEL
+WEN => mux2_1:inst22.SEL
+D[0] => mux2_1:inst25.B
+D[1] => mux2_1:inst24.B
+D[2] => mux2_1:inst23.B
+D[3] => mux2_1:inst22.B
+D[4] => mux2_1:inst21.B
+D[5] => mux2_1:inst20.B
+D[6] => mux2_1:inst19.B
+D[7] => mux2_1:inst18.B
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst25
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst24
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst23
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst21
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst20
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst19
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst18
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst51|mux2_1:inst22
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|adapter:inst
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst54
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst55
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst56
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst57
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst58
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst59
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst60
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst67
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst66
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst65
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst64
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst63
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst62
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst61
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst84
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|register8:inst52
+Q[0] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst16.IN0
+CP_time => inst13.CLK
+CP_time => inst14.CLK
+CP_time => inst12.CLK
+CP_time => inst11.CLK
+CP_time => inst6.CLK
+CP_time => inst7.CLK
+CP_time => inst8.CLK
+CP_time => inst10.CLK
+WEN => mux2_1:inst25.SEL
+WEN => mux2_1:inst24.SEL
+WEN => mux2_1:inst23.SEL
+WEN => mux2_1:inst21.SEL
+WEN => mux2_1:inst20.SEL
+WEN => mux2_1:inst19.SEL
+WEN => mux2_1:inst18.SEL
+WEN => mux2_1:inst22.SEL
+D[0] => mux2_1:inst25.B
+D[1] => mux2_1:inst24.B
+D[2] => mux2_1:inst23.B
+D[3] => mux2_1:inst22.B
+D[4] => mux2_1:inst21.B
+D[5] => mux2_1:inst20.B
+D[6] => mux2_1:inst19.B
+D[7] => mux2_1:inst18.B
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst25
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst24
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst23
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst21
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst20
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst19
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst18
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst52|mux2_1:inst22
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|adapter:inst69
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst70
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst71
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst72
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst73
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst74
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst75
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst76
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst83
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst82
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst81
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst80
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst79
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst78
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst99
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|register8:inst53
+Q[0] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst16.IN0
+CP_time => inst13.CLK
+CP_time => inst14.CLK
+CP_time => inst12.CLK
+CP_time => inst11.CLK
+CP_time => inst6.CLK
+CP_time => inst7.CLK
+CP_time => inst8.CLK
+CP_time => inst10.CLK
+WEN => mux2_1:inst25.SEL
+WEN => mux2_1:inst24.SEL
+WEN => mux2_1:inst23.SEL
+WEN => mux2_1:inst21.SEL
+WEN => mux2_1:inst20.SEL
+WEN => mux2_1:inst19.SEL
+WEN => mux2_1:inst18.SEL
+WEN => mux2_1:inst22.SEL
+D[0] => mux2_1:inst25.B
+D[1] => mux2_1:inst24.B
+D[2] => mux2_1:inst23.B
+D[3] => mux2_1:inst22.B
+D[4] => mux2_1:inst21.B
+D[5] => mux2_1:inst20.B
+D[6] => mux2_1:inst19.B
+D[7] => mux2_1:inst18.B
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst25
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst24
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst23
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst21
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst20
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst19
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst18
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|register8:inst53|mux2_1:inst22
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|uIR_hxgdly|adapter:inst85
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst86
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst88
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst90
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst91
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst92
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst87
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst89
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst98
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst97
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst95
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst94
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst93
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst77
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst96
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+
+|uIR_hxgdly|adapter:inst100
+B <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+
+

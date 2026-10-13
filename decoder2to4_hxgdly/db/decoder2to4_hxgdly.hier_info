@@ -1,0 +1,13 @@
+|decoder2to4_hxgdly
+Y[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL[0] => inst.IN0
+SEL[0] => inst2.IN1
+SEL[0] => inst5.IN1
+SEL[1] => inst4.IN0
+SEL[1] => inst2.IN0
+SEL[1] => inst1.IN0
+
+

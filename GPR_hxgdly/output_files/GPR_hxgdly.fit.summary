@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon May 25 18:31:28 2026
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : GPR_hxgdly
+Top-level Entity Name : GPR_hxgdly
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 52 / 8,256 ( < 1 % )
+    Total combinational functions : 52 / 8,256 ( < 1 % )
+    Dedicated logic registers : 32 / 8,256 ( < 1 % )
+Total registers : 32
+Total pins : 43 / 138 ( 31 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

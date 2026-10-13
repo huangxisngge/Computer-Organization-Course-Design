@@ -1,0 +1,10 @@
+|next
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+

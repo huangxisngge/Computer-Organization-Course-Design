@@ -1,0 +1,1684 @@
+TimeQuest Timing Analyzer report for exp_final_hxgdly
+Fri May 29 00:11:21 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLKi'
+ 12. Slow Model Hold: 'CLKi'
+ 13. Slow Model Minimum Pulse Width: 'CLKi'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'CLKi'
+ 26. Fast Model Hold: 'CLKi'
+ 27. Fast Model Minimum Pulse Width: 'CLKi'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; exp_final_hxgdly                                                  ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C8Q208C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 22     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                           ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; CLKi       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLKi } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 85.01 MHz ; 85.01 MHz       ; CLKi       ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; CLKi  ; -10.763 ; -770.320      ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLKi  ; 0.499 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLKi  ; -1.941 ; -135.501              ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLKi'                                                                                                                                           ;
++---------+------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -10.763 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.741     ;
+; -10.762 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.740     ;
+; -10.737 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.743     ;
+; -10.736 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.742     ;
+; -10.642 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.620     ;
+; -10.641 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.619     ;
+; -10.639 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.033     ; 11.646     ;
+; -10.638 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.033     ; 11.645     ;
+; -10.550 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.555     ;
+; -10.549 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.554     ;
+; -10.545 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.550     ;
+; -10.544 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.549     ;
+; -10.540 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 11.580     ;
+; -10.539 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 11.579     ;
+; -10.525 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.503     ;
+; -10.523 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.501     ;
+; -10.512 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.518     ;
+; -10.508 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.514     ;
+; -10.499 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.505     ;
+; -10.497 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.503     ;
+; -10.486 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 11.520     ;
+; -10.482 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 11.516     ;
+; -10.479 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.484     ;
+; -10.478 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.483     ;
+; -10.475 ; MDR_hxg:inst61|inst13                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.089     ; 11.426     ;
+; -10.473 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.479     ;
+; -10.473 ; MDR_hxg:inst61|inst13                    ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 11.513     ;
+; -10.471 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.477     ;
+; -10.449 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.061     ; 11.428     ;
+; -10.447 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 11.481     ;
+; -10.447 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.028      ; 11.515     ;
+; -10.445 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 11.479     ;
+; -10.436 ; register8:IRir|inst12                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.024     ; 11.452     ;
+; -10.435 ; register8:IRir|inst12                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.024     ; 11.451     ;
+; -10.409 ; MDR_hxg:inst61|inst13                    ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.387     ;
+; -10.404 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.382     ;
+; -10.402 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.380     ;
+; -10.401 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.033     ; 11.408     ;
+; -10.399 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.033     ; 11.406     ;
+; -10.391 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.397     ;
+; -10.388 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 11.423     ;
+; -10.387 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.393     ;
+; -10.384 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 11.419     ;
+; -10.383 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.389     ;
+; -10.370 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.033     ; 11.377     ;
+; -10.369 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.033     ; 11.376     ;
+; -10.354 ; MDR_hxg:inst61|inst14                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.089     ; 11.305     ;
+; -10.352 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.358     ;
+; -10.352 ; MDR_hxg:inst61|inst14                    ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 11.392     ;
+; -10.351 ; register8:IRir|inst14                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.060     ; 11.331     ;
+; -10.350 ; register8:IRir|inst10                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.024     ; 11.366     ;
+; -10.350 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 11.356     ;
+; -10.349 ; register8:IRir|inst10                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.024     ; 11.365     ;
+; -10.349 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 11.384     ;
+; -10.349 ; register8:IRir|inst14                    ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.029      ; 11.418     ;
+; -10.347 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 11.382     ;
+; -10.330 ; MDR_hxg:inst61|inst13                    ; register8:IRir|inst8                    ; CLKi         ; CLKi        ; 1.000        ; -0.036     ; 11.334     ;
+; -10.312 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.317     ;
+; -10.310 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.315     ;
+; -10.307 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.312     ;
+; -10.306 ; MDR_hxg:inst61|inst13                    ; register8:IRir|inst7                    ; CLKi         ; CLKi        ; 1.000        ; -0.036     ; 11.310     ;
+; -10.305 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.310     ;
+; -10.304 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; register8:IRir|inst8                    ; CLKi         ; CLKi        ; 1.000        ; -0.008     ; 11.336     ;
+; -10.302 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 11.342     ;
+; -10.300 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 11.340     ;
+; -10.299 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.332     ;
+; -10.295 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.328     ;
+; -10.294 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.327     ;
+; -10.290 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.323     ;
+; -10.289 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; 0.028      ; 11.357     ;
+; -10.288 ; MDR_hxg:inst61|inst14                    ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.266     ;
+; -10.285 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; 0.028      ; 11.353     ;
+; -10.285 ; register8:IRir|inst14                    ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.033     ; 11.292     ;
+; -10.280 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; register8:IRir|inst7                    ; CLKi         ; CLKi        ; 1.000        ; -0.008     ; 11.312     ;
+; -10.264 ; GPR_hxgdly:inst68|register8:inst8|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.036     ; 11.268     ;
+; -10.263 ; GPR_hxgdly:inst68|register8:inst8|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.036     ; 11.267     ;
+; -10.263 ; GPR_hxgdly:inst68|register8:inst6|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.268     ;
+; -10.262 ; GPR_hxgdly:inst68|register8:inst6|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.267     ;
+; -10.262 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.240     ;
+; -10.260 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.293     ;
+; -10.260 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.027      ; 11.327     ;
+; -10.258 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.291     ;
+; -10.257 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.062     ; 11.235     ;
+; -10.255 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.288     ;
+; -10.255 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.027      ; 11.322     ;
+; -10.253 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.286     ;
+; -10.252 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 11.265     ;
+; -10.250 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.028      ; 11.318     ;
+; -10.250 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.062      ; 11.352     ;
+; -10.248 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.028      ; 11.316     ;
+; -10.241 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.246     ;
+; -10.239 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 11.244     ;
+; -10.234 ; MDR_hxg:inst61|inst13                    ; MDR_hxg:inst61|inst7                    ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.267     ;
+; -10.228 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.261     ;
+; -10.224 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.257     ;
+; -10.219 ; SPR_hxgdly:PC|register8:inst1|inst13     ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.072      ; 11.331     ;
+; -10.218 ; SPR_hxgdly:PC|register8:inst1|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.072      ; 11.330     ;
+; -10.209 ; MDR_hxg:inst61|inst14                    ; register8:IRir|inst8                    ; CLKi         ; CLKi        ; 1.000        ; -0.036     ; 11.213     ;
+; -10.208 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; MDR_hxg:inst61|inst7                    ; CLKi         ; CLKi        ; 1.000        ; 0.021      ; 11.269     ;
+; -10.206 ; register8:IRir|inst14                    ; register8:IRir|inst8                    ; CLKi         ; CLKi        ; 1.000        ; -0.007     ; 11.239     ;
++---------+------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLKi'                                                                                                                                                   ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.805      ;
+; 1.520 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.826      ;
+; 1.657 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 1.962      ;
+; 1.745 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.051      ;
+; 1.760 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.066      ;
+; 1.937 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.243      ;
+; 1.987 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.293      ;
+; 2.121 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; -0.007     ; 2.420      ;
+; 2.122 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 2.427      ;
+; 2.211 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; -0.007     ; 2.510      ;
+; 2.228 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.534      ;
+; 2.236 ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.542      ;
+; 2.277 ; register8:IRir|inst6                         ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.077     ; 2.506      ;
+; 2.280 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; -0.007     ; 2.579      ;
+; 2.335 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; CLKi         ; CLKi        ; 0.000        ; 0.012      ; 2.653      ;
+; 2.335 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; CLKi         ; CLKi        ; 0.000        ; 0.012      ; 2.653      ;
+; 2.369 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; -0.007     ; 2.668      ;
+; 2.496 ; GPR_hxgdly:inst68|register8:inst6|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.802      ;
+; 2.579 ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 2.885      ;
+; 2.606 ; register8:IRir|inst7                         ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; -0.077     ; 2.835      ;
+; 2.687 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; 0.005      ; 2.998      ;
+; 2.688 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.005      ; 2.999      ;
+; 2.714 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 3.019      ;
+; 2.777 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.087      ;
+; 2.780 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.090      ;
+; 2.795 ; MDR_hxg:inst61|inst13                        ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 3.074      ;
+; 2.817 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 3.123      ;
+; 2.850 ; MDR_hxg:inst61|inst11                        ; register8:MAR|inst11                         ; CLKi         ; CLKi        ; 0.000        ; -0.053     ; 3.103      ;
+; 2.952 ; GPR_hxgdly:inst68|register8:inst7|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.007      ; 3.265      ;
+; 3.020 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 3.325      ;
+; 3.033 ; GPR_hxgdly:inst68|register8:inst8|inst10     ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; -0.053     ; 3.286      ;
+; 3.064 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst10     ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.346      ;
+; 3.064 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.346      ;
+; 3.064 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst6      ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.346      ;
+; 3.064 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst7      ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.346      ;
+; 3.064 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst8      ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.346      ;
+; 3.114 ; SPR_hxgdly:PC|register8:inst2|inst6          ; register8:MAR|inst6                          ; CLKi         ; CLKi        ; 0.000        ; 0.019      ; 3.439      ;
+; 3.157 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 3.463      ;
+; 3.164 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; 0.005      ; 3.475      ;
+; 3.171 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 3.476      ;
+; 3.179 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 3.484      ;
+; 3.215 ; MDR_hxg:inst61|inst7                         ; SPR_hxgdly:PC|register8:inst1|inst7          ; CLKi         ; CLKi        ; 0.000        ; -0.126     ; 3.395      ;
+; 3.227 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst14     ; CLKi         ; CLKi        ; 0.000        ; 0.010      ; 3.543      ;
+; 3.238 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst12     ; CLKi         ; CLKi        ; 0.000        ; 0.013      ; 3.557      ;
+; 3.260 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.570      ;
+; 3.262 ; register8:IRir|inst14                        ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 3.570      ;
+; 3.284 ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 3.590      ;
+; 3.304 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.614      ;
+; 3.304 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst11     ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.614      ;
+; 3.304 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst6      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.614      ;
+; 3.304 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst7      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.614      ;
+; 3.304 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst8      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.614      ;
+; 3.311 ; MDR_hxg:inst61|inst10                        ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; -0.072     ; 3.545      ;
+; 3.319 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst10     ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.601      ;
+; 3.319 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.601      ;
+; 3.319 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst6      ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.601      ;
+; 3.319 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst7      ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.601      ;
+; 3.319 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst8      ; CLKi         ; CLKi        ; 0.000        ; -0.024     ; 3.601      ;
+; 3.379 ; GPR_hxgdly:inst68|register8:inst6|inst13     ; MDR_hxg:inst61|inst13                        ; CLKi         ; CLKi        ; 0.000        ; 0.027      ; 3.712      ;
+; 3.396 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.008     ; 3.694      ;
+; 3.411 ; register8:IRir|inst13                        ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 3.719      ;
+; 3.416 ; SPR_hxgdly:PC|register8:inst2|inst14         ; register8:MAR|inst14                         ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 3.724      ;
+; 3.450 ; SPR_hxgdly:PC|register8:inst2|inst10         ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 3.758      ;
+; 3.477 ; GPR_hxgdly:inst68|register8:inst9|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 3.783      ;
+; 3.486 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.008     ; 3.784      ;
+; 3.525 ; SPR_hxgdly:PC|register8:inst2|inst13         ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.045      ; 3.876      ;
+; 3.533 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; -0.007     ; 3.832      ;
+; 3.535 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.845      ;
+; 3.535 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst11     ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.845      ;
+; 3.535 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst6      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.845      ;
+; 3.535 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst7      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.845      ;
+; 3.535 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst8      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.845      ;
+; 3.545 ; MDR_hxg:inst61|inst11                        ; MDR_hxg:inst61|inst11                        ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 3.851      ;
+; 3.572 ; register8:IRir|inst8                         ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; -0.077     ; 3.801      ;
+; 3.608 ; GPR_hxgdly:inst68|register8:inst8|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.007      ; 3.921      ;
+; 3.610 ; GPR_hxgdly:inst68|register8:inst8|inst14     ; register8:MAR|inst14                         ; CLKi         ; CLKi        ; 0.000        ; -0.053     ; 3.863      ;
+; 3.623 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; -0.007     ; 3.922      ;
+; 3.636 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 3.941      ;
+; 3.644 ; SPR_hxgdly:PC|register8:inst3|inst7          ; SPR_hxgdly:PC|register8:inst1|inst7          ; CLKi         ; CLKi        ; 0.000        ; -0.044     ; 3.906      ;
+; 3.657 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.967      ;
+; 3.657 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst11     ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.967      ;
+; 3.657 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst6      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.967      ;
+; 3.657 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst7      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.967      ;
+; 3.657 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst8      ; CLKi         ; CLKi        ; 0.000        ; 0.004      ; 3.967      ;
+; 3.678 ; MDR_hxg:inst61|inst13                        ; MDR_hxg:inst61|inst13                        ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 3.984      ;
+; 3.693 ; GPR_hxgdly:inst68|register8:inst6|inst11     ; register8:MAR|inst11                         ; CLKi         ; CLKi        ; 0.000        ; -0.017     ; 3.982      ;
+; 3.728 ; register8:IRir|inst13                        ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; -0.050     ; 3.984      ;
+; 3.737 ; register8:IRir|inst13                        ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; CLKi         ; CLKi        ; 0.000        ; -0.076     ; 3.967      ;
+; 3.746 ; GPR_hxgdly:inst68|register8:inst7|inst7      ; SPR_hxgdly:PC|register8:inst1|inst7          ; CLKi         ; CLKi        ; 0.000        ; -0.099     ; 3.953      ;
+; 3.766 ; register8:IRir|inst11                        ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; -0.074     ; 3.998      ;
+; 3.812 ; GPR_hxgdly:inst68|register8:inst8|inst8      ; inst34                                       ; CLKi         ; CLKi        ; 0.000        ; -0.083     ; 4.035      ;
+; 3.835 ; GPR_hxgdly:inst68|register8:inst7|inst13     ; MDR_hxg:inst61|inst13                        ; CLKi         ; CLKi        ; 0.000        ; 0.034      ; 4.175      ;
+; 3.888 ; MDR_hxg:inst61|inst12                        ; register8:MAR|inst12                         ; CLKi         ; CLKi        ; 0.000        ; -0.079     ; 4.115      ;
+; 3.904 ; SPR_hxgdly:PC|register8:inst2|inst7          ; SPR_hxgdly:PC|register8:inst1|inst7          ; CLKi         ; CLKi        ; 0.000        ; -0.053     ; 4.157      ;
+; 3.910 ; MDR_hxg:inst61|inst11                        ; GPR_hxgdly:inst68|register8:inst9|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.036     ; 4.180      ;
+; 3.910 ; MDR_hxg:inst61|inst11                        ; GPR_hxgdly:inst68|register8:inst6|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.036     ; 4.180      ;
+; 3.933 ; GPR_hxgdly:inst68|register8:inst6|inst13     ; SPR_hxgdly:PC|register8:inst1|inst13         ; CLKi         ; CLKi        ; 0.000        ; -0.107     ; 4.132      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLKi'                                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; CLKi  ; Rise       ; CLKi                                     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst10 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst11 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst12 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst13 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst14 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst6  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst7  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst8  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst10                    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst10                    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst11                    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst11                    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst12                    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst12                    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst13                    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst13                    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst14                    ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst14                    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst6                     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst6                     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst7                     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst7                     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|x                         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|x                         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst10     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst10     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst11     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst11     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst12     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst12     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst13     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst13     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst14     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst14     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst6      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst6      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst7      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst7      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst8      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst8      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst2|inst10     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst2|inst10     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst2|inst11     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; 89        ; CLKi       ; 3.861  ; 3.861  ; Fall       ; CLKi            ;
+; 90        ; CLKi       ; 4.296  ; 4.296  ; Fall       ; CLKi            ;
+; 92        ; CLKi       ; 3.852  ; 3.852  ; Fall       ; CLKi            ;
+; 94        ; CLKi       ; 12.169 ; 12.169 ; Fall       ; CLKi            ;
+; 95        ; CLKi       ; 12.644 ; 12.644 ; Fall       ; CLKi            ;
+; 99        ; CLKi       ; 1.712  ; 1.712  ; Fall       ; CLKi            ;
+; 101       ; CLKi       ; 1.478  ; 1.478  ; Fall       ; CLKi            ;
+; 103       ; CLKi       ; 0.504  ; 0.504  ; Fall       ; CLKi            ;
+; 104       ; CLKi       ; 0.583  ; 0.583  ; Fall       ; CLKi            ;
+; 105       ; CLKi       ; 8.685  ; 8.685  ; Fall       ; CLKi            ;
+; 106       ; CLKi       ; 8.428  ; 8.428  ; Fall       ; CLKi            ;
+; 112       ; CLKi       ; 6.654  ; 6.654  ; Fall       ; CLKi            ;
+; 113       ; CLKi       ; 3.852  ; 3.852  ; Fall       ; CLKi            ;
+; 114       ; CLKi       ; 3.446  ; 3.446  ; Fall       ; CLKi            ;
+; 115       ; CLKi       ; 3.560  ; 3.560  ; Fall       ; CLKi            ;
+; 116       ; CLKi       ; 9.252  ; 9.252  ; Fall       ; CLKi            ;
+; 117       ; CLKi       ; 8.479  ; 8.479  ; Fall       ; CLKi            ;
+; 118       ; CLKi       ; 11.378 ; 11.378 ; Fall       ; CLKi            ;
+; 127       ; CLKi       ; 13.109 ; 13.109 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 1.454  ; 1.454  ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 1.454  ; 1.454  ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 1.240  ; 1.240  ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 0.972  ; 0.972  ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 0.882  ; 0.882  ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 1.110  ; 1.110  ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 1.232  ; 1.232  ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 0.821  ; 0.821  ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 1.132  ; 1.132  ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; 89        ; CLKi       ; -1.118 ; -1.118 ; Fall       ; CLKi            ;
+; 90        ; CLKi       ; -1.246 ; -1.246 ; Fall       ; CLKi            ;
+; 92        ; CLKi       ; -0.759 ; -0.759 ; Fall       ; CLKi            ;
+; 94        ; CLKi       ; -3.339 ; -3.339 ; Fall       ; CLKi            ;
+; 95        ; CLKi       ; -4.238 ; -4.238 ; Fall       ; CLKi            ;
+; 99        ; CLKi       ; -0.715 ; -0.715 ; Fall       ; CLKi            ;
+; 101       ; CLKi       ; -0.436 ; -0.436 ; Fall       ; CLKi            ;
+; 103       ; CLKi       ; -0.238 ; -0.238 ; Fall       ; CLKi            ;
+; 104       ; CLKi       ; -0.317 ; -0.317 ; Fall       ; CLKi            ;
+; 105       ; CLKi       ; -1.668 ; -1.668 ; Fall       ; CLKi            ;
+; 106       ; CLKi       ; -2.200 ; -2.200 ; Fall       ; CLKi            ;
+; 112       ; CLKi       ; -0.438 ; -0.438 ; Fall       ; CLKi            ;
+; 113       ; CLKi       ; -0.968 ; -0.968 ; Fall       ; CLKi            ;
+; 114       ; CLKi       ; -0.791 ; -0.791 ; Fall       ; CLKi            ;
+; 115       ; CLKi       ; -0.844 ; -0.844 ; Fall       ; CLKi            ;
+; 116       ; CLKi       ; -1.018 ; -1.018 ; Fall       ; CLKi            ;
+; 117       ; CLKi       ; -0.224 ; -0.224 ; Fall       ; CLKi            ;
+; 118       ; CLKi       ; -1.146 ; -1.146 ; Fall       ; CLKi            ;
+; 127       ; CLKi       ; -1.103 ; -1.103 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; -0.555 ; -0.555 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; -1.188 ; -1.188 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; -0.974 ; -0.974 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; -0.706 ; -0.706 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; -0.616 ; -0.616 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; -0.844 ; -0.844 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; -0.966 ; -0.966 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; -0.555 ; -0.555 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; -0.866 ; -0.866 ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; CPuIR_OUT ; CLKi       ; 9.907  ; 9.907  ; Rise       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 9.907  ; 9.907  ; Rise       ; CLKi            ;
+; 34        ; CLKi       ; 15.201 ; 15.201 ; Fall       ; CLKi            ;
+; 35        ; CLKi       ; 14.312 ; 14.312 ; Fall       ; CLKi            ;
+; 37        ; CLKi       ; 14.873 ; 14.873 ; Fall       ; CLKi            ;
+; 39        ; CLKi       ; 14.416 ; 14.416 ; Fall       ; CLKi            ;
+; 40        ; CLKi       ; 14.213 ; 14.213 ; Fall       ; CLKi            ;
+; 41        ; CLKi       ; 13.201 ; 13.201 ; Fall       ; CLKi            ;
+; 43        ; CLKi       ; 13.752 ; 13.752 ; Fall       ; CLKi            ;
+; 44        ; CLKi       ; 14.310 ; 14.310 ; Fall       ; CLKi            ;
+; 151       ; CLKi       ; 13.869 ; 13.869 ; Fall       ; CLKi            ;
+; 152       ; CLKi       ; 14.085 ; 14.085 ; Fall       ; CLKi            ;
+; 160       ; CLKi       ; 13.947 ; 13.947 ; Fall       ; CLKi            ;
+; 161       ; CLKi       ; 13.641 ; 13.641 ; Fall       ; CLKi            ;
+; 162       ; CLKi       ; 14.025 ; 14.025 ; Fall       ; CLKi            ;
+; 163       ; CLKi       ; 13.667 ; 13.667 ; Fall       ; CLKi            ;
+; 168       ; CLKi       ; 13.961 ; 13.961 ; Fall       ; CLKi            ;
+; 169       ; CLKi       ; 13.691 ; 13.691 ; Fall       ; CLKi            ;
+; 170       ; CLKi       ; 13.652 ; 13.652 ; Fall       ; CLKi            ;
+; 171       ; CLKi       ; 13.629 ; 13.629 ; Fall       ; CLKi            ;
+; 173       ; CLKi       ; 13.279 ; 13.279 ; Fall       ; CLKi            ;
+; 175       ; CLKi       ; 13.276 ; 13.276 ; Fall       ; CLKi            ;
+; 176       ; CLKi       ; 13.279 ; 13.279 ; Fall       ; CLKi            ;
+; 179       ; CLKi       ; 13.310 ; 13.310 ; Fall       ; CLKi            ;
+; 180       ; CLKi       ; 13.645 ; 13.645 ; Fall       ; CLKi            ;
+; 181       ; CLKi       ; 13.787 ; 13.787 ; Fall       ; CLKi            ;
+; 182       ; CLKi       ; 13.602 ; 13.602 ; Fall       ; CLKi            ;
+; 185       ; CLKi       ; 13.952 ; 13.952 ; Fall       ; CLKi            ;
+; 187       ; CLKi       ; 13.987 ; 13.987 ; Fall       ; CLKi            ;
+; 188       ; CLKi       ; 13.991 ; 13.991 ; Fall       ; CLKi            ;
+; 189       ; CLKi       ; 13.629 ; 13.629 ; Fall       ; CLKi            ;
+; 191       ; CLKi       ; 13.979 ; 13.979 ; Fall       ; CLKi            ;
+; CPuIR_OUT ; CLKi       ; 18.923 ; 18.923 ; Fall       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 18.923 ; 18.923 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 15.320 ; 15.320 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 14.141 ; 14.141 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 14.575 ; 14.575 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 15.320 ; 15.320 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 15.231 ; 15.231 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 13.865 ; 13.865 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 13.806 ; 13.806 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 14.839 ; 14.839 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 14.197 ; 14.197 ; Fall       ; CLKi            ;
+; WSSB[*]   ; CLKi       ; 15.792 ; 15.792 ; Fall       ; CLKi            ;
+;  WSSB[0]  ; CLKi       ; 13.830 ; 13.830 ; Fall       ; CLKi            ;
+;  WSSB[1]  ; CLKi       ; 15.792 ; 15.792 ; Fall       ; CLKi            ;
+;  WSSB[2]  ; CLKi       ; 15.594 ; 15.594 ; Fall       ; CLKi            ;
+;  WSSB[3]  ; CLKi       ; 14.552 ; 14.552 ; Fall       ; CLKi            ;
+;  WSSB[4]  ; CLKi       ; 14.207 ; 14.207 ; Fall       ; CLKi            ;
+;  WSSB[5]  ; CLKi       ; 14.780 ; 14.780 ; Fall       ; CLKi            ;
+;  WSSB[6]  ; CLKi       ; 13.688 ; 13.688 ; Fall       ; CLKi            ;
+;  WSSB[7]  ; CLKi       ; 15.042 ; 15.042 ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; CPuIR_OUT ; CLKi       ; 9.907  ; 9.907  ; Rise       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 9.907  ; 9.907  ; Rise       ; CLKi            ;
+; 34        ; CLKi       ; 15.201 ; 15.201 ; Fall       ; CLKi            ;
+; 35        ; CLKi       ; 14.312 ; 14.312 ; Fall       ; CLKi            ;
+; 37        ; CLKi       ; 14.873 ; 14.873 ; Fall       ; CLKi            ;
+; 39        ; CLKi       ; 14.416 ; 14.416 ; Fall       ; CLKi            ;
+; 40        ; CLKi       ; 14.213 ; 14.213 ; Fall       ; CLKi            ;
+; 41        ; CLKi       ; 13.201 ; 13.201 ; Fall       ; CLKi            ;
+; 43        ; CLKi       ; 13.752 ; 13.752 ; Fall       ; CLKi            ;
+; 44        ; CLKi       ; 14.310 ; 14.310 ; Fall       ; CLKi            ;
+; 151       ; CLKi       ; 13.869 ; 13.869 ; Fall       ; CLKi            ;
+; 152       ; CLKi       ; 14.085 ; 14.085 ; Fall       ; CLKi            ;
+; 160       ; CLKi       ; 13.947 ; 13.947 ; Fall       ; CLKi            ;
+; 161       ; CLKi       ; 13.641 ; 13.641 ; Fall       ; CLKi            ;
+; 162       ; CLKi       ; 14.025 ; 14.025 ; Fall       ; CLKi            ;
+; 163       ; CLKi       ; 13.667 ; 13.667 ; Fall       ; CLKi            ;
+; 168       ; CLKi       ; 13.961 ; 13.961 ; Fall       ; CLKi            ;
+; 169       ; CLKi       ; 13.691 ; 13.691 ; Fall       ; CLKi            ;
+; 170       ; CLKi       ; 13.652 ; 13.652 ; Fall       ; CLKi            ;
+; 171       ; CLKi       ; 13.629 ; 13.629 ; Fall       ; CLKi            ;
+; 173       ; CLKi       ; 13.279 ; 13.279 ; Fall       ; CLKi            ;
+; 175       ; CLKi       ; 13.276 ; 13.276 ; Fall       ; CLKi            ;
+; 176       ; CLKi       ; 13.279 ; 13.279 ; Fall       ; CLKi            ;
+; 179       ; CLKi       ; 13.310 ; 13.310 ; Fall       ; CLKi            ;
+; 180       ; CLKi       ; 13.645 ; 13.645 ; Fall       ; CLKi            ;
+; 181       ; CLKi       ; 13.787 ; 13.787 ; Fall       ; CLKi            ;
+; 182       ; CLKi       ; 13.602 ; 13.602 ; Fall       ; CLKi            ;
+; 185       ; CLKi       ; 13.952 ; 13.952 ; Fall       ; CLKi            ;
+; 187       ; CLKi       ; 13.987 ; 13.987 ; Fall       ; CLKi            ;
+; 188       ; CLKi       ; 13.991 ; 13.991 ; Fall       ; CLKi            ;
+; 189       ; CLKi       ; 13.629 ; 13.629 ; Fall       ; CLKi            ;
+; 191       ; CLKi       ; 13.979 ; 13.979 ; Fall       ; CLKi            ;
+; CPuIR_OUT ; CLKi       ; 9.907  ; 9.907  ; Fall       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 9.907  ; 9.907  ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 13.806 ; 13.806 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 14.141 ; 14.141 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 14.575 ; 14.575 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 15.320 ; 15.320 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 15.231 ; 15.231 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 13.865 ; 13.865 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 13.806 ; 13.806 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 14.839 ; 14.839 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 14.197 ; 14.197 ; Fall       ; CLKi            ;
+; WSSB[*]   ; CLKi       ; 13.688 ; 13.688 ; Fall       ; CLKi            ;
+;  WSSB[0]  ; CLKi       ; 13.830 ; 13.830 ; Fall       ; CLKi            ;
+;  WSSB[1]  ; CLKi       ; 15.792 ; 15.792 ; Fall       ; CLKi            ;
+;  WSSB[2]  ; CLKi       ; 15.594 ; 15.594 ; Fall       ; CLKi            ;
+;  WSSB[3]  ; CLKi       ; 14.552 ; 14.552 ; Fall       ; CLKi            ;
+;  WSSB[4]  ; CLKi       ; 14.207 ; 14.207 ; Fall       ; CLKi            ;
+;  WSSB[5]  ; CLKi       ; 14.780 ; 14.780 ; Fall       ; CLKi            ;
+;  WSSB[6]  ; CLKi       ; 13.688 ; 13.688 ; Fall       ; CLKi            ;
+;  WSSB[7]  ; CLKi       ; 15.042 ; 15.042 ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; 99         ; 63          ; 15.550 ;        ;        ; 15.550 ;
+; 99         ; 64          ;        ; 15.687 ; 15.687 ;        ;
+; 101        ; 63          ;        ; 15.431 ; 15.431 ;        ;
+; 101        ; 64          ; 15.372 ;        ;        ; 15.372 ;
+; 102        ; RAMc[0]     ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
+; 102        ; RAMc[1]     ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
+; 102        ; RAMc[2]     ; 11.525 ; 11.525 ; 11.525 ; 11.525 ;
+; 102        ; RAMc[3]     ; 11.888 ; 11.888 ; 11.888 ; 11.888 ;
+; 102        ; RAMc[4]     ; 11.898 ; 11.898 ; 11.898 ; 11.898 ;
+; 102        ; RAMc[5]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; 102        ; RAMc[6]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; 102        ; RAMc[7]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; RESET      ; CPuIR_OUT   ;        ; 18.442 ; 18.442 ;        ;
+; RESET      ; MU_RD_N     ;        ; 18.442 ; 18.442 ;        ;
+; START      ; CPuIR_OUT   ;        ; 13.024 ; 13.024 ;        ;
+; START      ; MU_RD_N     ;        ; 13.024 ; 13.024 ;        ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; 99         ; 63          ; 15.550 ;        ;        ; 15.550 ;
+; 99         ; 64          ;        ; 15.687 ; 15.687 ;        ;
+; 101        ; 63          ;        ; 15.431 ; 15.431 ;        ;
+; 101        ; 64          ; 15.372 ;        ;        ; 15.372 ;
+; 102        ; RAMc[0]     ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
+; 102        ; RAMc[1]     ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
+; 102        ; RAMc[2]     ; 11.525 ; 11.525 ; 11.525 ; 11.525 ;
+; 102        ; RAMc[3]     ; 11.888 ; 11.888 ; 11.888 ; 11.888 ;
+; 102        ; RAMc[4]     ; 11.898 ; 11.898 ; 11.898 ; 11.898 ;
+; 102        ; RAMc[5]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; 102        ; RAMc[6]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; 102        ; RAMc[7]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; RESET      ; CPuIR_OUT   ;        ; 18.442 ; 18.442 ;        ;
+; RESET      ; MU_RD_N     ;        ; 18.442 ; 18.442 ;        ;
+; START      ; CPuIR_OUT   ;        ; 13.024 ; 13.024 ;        ;
+; START      ; MU_RD_N     ;        ; 13.024 ; 13.024 ;        ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLKi  ; -2.591 ; -175.117      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLKi  ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLKi  ; -1.380 ; -91.380               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLKi'                                                                                                                                          ;
++--------+------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.591 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.572      ;
+; -2.589 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.570      ;
+; -2.582 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 3.580      ;
+; -2.580 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 3.578      ;
+; -2.571 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.568      ;
+; -2.569 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.566      ;
+; -2.568 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.549      ;
+; -2.566 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.547      ;
+; -2.523 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.520      ;
+; -2.521 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.518      ;
+; -2.518 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.515      ;
+; -2.517 ; MDR_hxg:inst61|inst13                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.091     ; 3.458      ;
+; -2.516 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.497      ;
+; -2.516 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.497      ;
+; -2.516 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.513      ;
+; -2.514 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.511      ;
+; -2.512 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.509      ;
+; -2.508 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.074     ; 3.466      ;
+; -2.507 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 3.505      ;
+; -2.507 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.034     ; 3.505      ;
+; -2.498 ; MDR_hxg:inst61|inst13                    ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.092     ; 3.438      ;
+; -2.497 ; register8:IRir|inst14                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.075     ; 3.454      ;
+; -2.496 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.506      ;
+; -2.496 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.493      ;
+; -2.496 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.493      ;
+; -2.494 ; MDR_hxg:inst61|inst14                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.091     ; 3.435      ;
+; -2.493 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.474      ;
+; -2.493 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.051     ; 3.474      ;
+; -2.491 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.501      ;
+; -2.489 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.075     ; 3.446      ;
+; -2.487 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 3.514      ;
+; -2.486 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.483      ;
+; -2.485 ; register8:IRir|inst12                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.490      ;
+; -2.484 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.481      ;
+; -2.483 ; register8:IRir|inst12                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.488      ;
+; -2.482 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 3.509      ;
+; -2.478 ; register8:IRir|inst14                    ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.076     ; 3.434      ;
+; -2.476 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.502      ;
+; -2.475 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.485      ;
+; -2.475 ; register8:IRir|inst10                    ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.480      ;
+; -2.475 ; MDR_hxg:inst61|inst14                    ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.092     ; 3.415      ;
+; -2.473 ; register8:IRir|inst10                    ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.478      ;
+; -2.473 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.483      ;
+; -2.472 ; MDR_hxg:inst61|inst13                    ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.482      ;
+; -2.471 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.497      ;
+; -2.470 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 3.502      ;
+; -2.468 ; GPR_hxgdly:inst68|register8:inst9|inst10 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 3.500      ;
+; -2.468 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.478      ;
+; -2.466 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 3.493      ;
+; -2.463 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.005     ; 3.490      ;
+; -2.455 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.481      ;
+; -2.452 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.462      ;
+; -2.452 ; register8:IRir|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.478      ;
+; -2.449 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.075     ; 3.406      ;
+; -2.449 ; MDR_hxg:inst61|inst14                    ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.022     ; 3.459      ;
+; -2.448 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.445      ;
+; -2.448 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.445      ;
+; -2.444 ; register8:IRir|inst13                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.075     ; 3.401      ;
+; -2.443 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.440      ;
+; -2.443 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.440      ;
+; -2.440 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.075     ; 3.397      ;
+; -2.439 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.436      ;
+; -2.439 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.436      ;
+; -2.430 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.076     ; 3.386      ;
+; -2.428 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.454      ;
+; -2.426 ; GPR_hxgdly:inst68|register8:inst8|inst13 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.029     ; 3.429      ;
+; -2.425 ; register8:IRir|inst13                    ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.076     ; 3.381      ;
+; -2.424 ; MDR_hxg:inst61|inst13                    ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 3.456      ;
+; -2.424 ; GPR_hxgdly:inst68|register8:inst8|inst13 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.029     ; 3.427      ;
+; -2.423 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.449      ;
+; -2.423 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.449      ;
+; -2.421 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; register8:MAR|inst7                     ; CLKi         ; CLKi        ; 1.000        ; -0.076     ; 3.377      ;
+; -2.419 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst7|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.445      ;
+; -2.418 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.444      ;
+; -2.417 ; GPR_hxgdly:inst68|register8:inst6|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.414      ;
+; -2.415 ; GPR_hxgdly:inst68|register8:inst6|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.412      ;
+; -2.415 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.017      ; 3.464      ;
+; -2.414 ; GPR_hxgdly:inst68|register8:inst9|inst12 ; GPR_hxgdly:inst68|register8:inst8|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.440      ;
+; -2.413 ; MDR_hxg:inst61|inst13                    ; register8:MAR|inst8                     ; CLKi         ; CLKi        ; 1.000        ; -0.092     ; 3.353      ;
+; -2.412 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.075     ; 3.369      ;
+; -2.411 ; register8:IRir|inst12                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.067     ; 3.376      ;
+; -2.411 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.408      ;
+; -2.411 ; GPR_hxgdly:inst68|register8:inst9|inst13 ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.035     ; 3.408      ;
+; -2.410 ; register8:IRir|inst12                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.415      ;
+; -2.410 ; register8:IRir|inst12                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.415      ;
+; -2.409 ; MDR_hxg:inst61|inst13                    ; SPR_hxgdly:PC|register8:inst2|inst7     ; CLKi         ; CLKi        ; 1.000        ; -0.086     ; 3.355      ;
+; -2.407 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.433      ;
+; -2.404 ; GPR_hxgdly:inst68|register8:inst9|inst14 ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.430      ;
+; -2.404 ; register8:IRir|inst14                    ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.016      ; 3.452      ;
+; -2.404 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; register8:MAR|inst8                     ; CLKi         ; CLKi        ; 1.000        ; -0.075     ; 3.361      ;
+; -2.402 ; MDR_hxg:inst61|inst13                    ; SPR_hxgdly:PC|register8:inst3|inst7     ; CLKi         ; CLKi        ; 1.000        ; -0.091     ; 3.343      ;
+; -2.402 ; GPR_hxgdly:inst68|register8:inst8|inst12 ; GPR_hxgdly:inst68|register8:inst6|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.036     ; 3.398      ;
+; -2.402 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst7|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.428      ;
+; -2.401 ; register8:IRir|inst10                    ; SPR_hxgdly:PC|register8:inst3|inst8     ; CLKi         ; CLKi        ; 1.000        ; -0.067     ; 3.366      ;
+; -2.401 ; MDR_hxg:inst61|inst14                    ; MDR_hxg:inst61|x                        ; CLKi         ; CLKi        ; 1.000        ; 0.000      ; 3.433      ;
+; -2.400 ; GPR_hxgdly:inst68|register8:inst8|inst12 ; GPR_hxgdly:inst68|register8:inst9|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.036     ; 3.396      ;
+; -2.400 ; register8:IRir|inst10                    ; GPR_hxgdly:inst68|register8:inst6|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.405      ;
+; -2.400 ; register8:IRir|inst10                    ; GPR_hxgdly:inst68|register8:inst9|inst8 ; CLKi         ; CLKi        ; 1.000        ; -0.027     ; 3.405      ;
+; -2.400 ; GPR_hxgdly:inst68|register8:inst7|inst14 ; SPR_hxgdly:PC|register8:inst2|inst7     ; CLKi         ; CLKi        ; 1.000        ; -0.069     ; 3.363      ;
+; -2.399 ; register8:IRir|inst13                    ; GPR_hxgdly:inst68|register8:inst8|inst7 ; CLKi         ; CLKi        ; 1.000        ; -0.006     ; 3.425      ;
++--------+------------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLKi'                                                                                                                                                   ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.452 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.604      ;
+; 0.506 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 0.657      ;
+; 0.532 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.684      ;
+; 0.549 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.701      ;
+; 0.584 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.736      ;
+; 0.596 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.748      ;
+; 0.618 ; register8:IRir|inst6                         ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; 0.043      ; 0.813      ;
+; 0.661 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 0.812      ;
+; 0.662 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.814      ;
+; 0.664 ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.816      ;
+; 0.678 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; -0.005     ; 0.825      ;
+; 0.700 ; register8:IRir|inst7                         ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; 0.043      ; 0.895      ;
+; 0.700 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; CLKi         ; CLKi        ; 0.000        ; 0.008      ; 0.860      ;
+; 0.700 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; CLKi         ; CLKi        ; 0.000        ; 0.008      ; 0.860      ;
+; 0.709 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; -0.005     ; 0.856      ;
+; 0.720 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; -0.005     ; 0.867      ;
+; 0.724 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; -0.005     ; 0.871      ;
+; 0.745 ; GPR_hxgdly:inst68|register8:inst6|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.897      ;
+; 0.751 ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.903      ;
+; 0.804 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 0.955      ;
+; 0.819 ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 0.971      ;
+; 0.841 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; CLKi         ; CLKi        ; 0.000        ; 0.003      ; 0.996      ;
+; 0.842 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.003      ; 0.997      ;
+; 0.853 ; MDR_hxg:inst61|inst13                        ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; -0.016     ; 0.989      ;
+; 0.859 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.013      ;
+; 0.862 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.016      ;
+; 0.886 ; GPR_hxgdly:inst68|register8:inst7|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.006      ; 1.044      ;
+; 0.922 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 1.073      ;
+; 0.927 ; MDR_hxg:inst61|inst11                        ; register8:MAR|inst11                         ; CLKi         ; CLKi        ; 0.000        ; -0.083     ; 0.996      ;
+; 0.932 ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 1.083      ;
+; 0.949 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.101      ;
+; 0.958 ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.110      ;
+; 0.959 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 1.110      ;
+; 0.970 ; inst34                                       ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; CLKi         ; CLKi        ; 0.000        ; 0.003      ; 1.125      ;
+; 0.974 ; SPR_hxgdly:PC|register8:inst2|inst6          ; register8:MAR|inst6                          ; CLKi         ; CLKi        ; 0.000        ; -0.004     ; 1.122      ;
+; 0.975 ; register8:IRir|inst14                        ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.127      ;
+; 0.992 ; inst34                                       ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.146      ;
+; 0.997 ; GPR_hxgdly:inst68|register8:inst6|inst13     ; MDR_hxg:inst61|inst13                        ; CLKi         ; CLKi        ; 0.000        ; 0.016      ; 1.165      ;
+; 1.009 ; register8:IRir|inst8                         ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; 0.043      ; 1.204      ;
+; 1.015 ; register8:IRir|inst13                        ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.167      ;
+; 1.037 ; GPR_hxgdly:inst68|register8:inst9|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.189      ;
+; 1.041 ; MDR_hxg:inst61|inst7                         ; SPR_hxgdly:PC|register8:inst1|inst7          ; CLKi         ; CLKi        ; 0.000        ; -0.118     ; 1.075      ;
+; 1.045 ; GPR_hxgdly:inst68|register8:inst8|inst10     ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; -0.094     ; 1.103      ;
+; 1.051 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.006     ; 1.197      ;
+; 1.059 ; MDR_hxg:inst61|inst11                        ; MDR_hxg:inst61|inst11                        ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.211      ;
+; 1.063 ; register8:IRir|inst13                        ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; CLKi         ; CLKi        ; 0.000        ; 0.043      ; 1.258      ;
+; 1.075 ; register8:IRir|inst11                        ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; 0.046      ; 1.273      ;
+; 1.078 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|87  ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; -0.005     ; 1.225      ;
+; 1.082 ; SPR_hxgdly:PC|register8:inst2|inst14         ; register8:MAR|inst14                         ; CLKi         ; CLKi        ; 0.000        ; -0.021     ; 1.213      ;
+; 1.082 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst|f74161:sub|87   ; CLKi         ; CLKi        ; 0.000        ; -0.006     ; 1.228      ;
+; 1.085 ; SPR_hxgdly:PC|register8:inst2|inst13         ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.064      ; 1.301      ;
+; 1.087 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|110 ; upc_hxgdly:inst11|74161:inst|f74161:sub|99   ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 1.238      ;
+; 1.090 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst14     ; CLKi         ; CLKi        ; 0.000        ; 0.007      ; 1.249      ;
+; 1.090 ; GPR_hxgdly:inst68|register8:inst8|inst13     ; GPR_hxgdly:inst68|register8:inst9|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.006      ; 1.248      ;
+; 1.099 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst12     ; CLKi         ; CLKi        ; 0.000        ; 0.010      ; 1.261      ;
+; 1.101 ; SPR_hxgdly:PC|register8:inst2|inst10         ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; -0.021     ; 1.232      ;
+; 1.101 ; MDR_hxg:inst61|inst10                        ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; -0.103     ; 1.150      ;
+; 1.104 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst10     ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.229      ;
+; 1.104 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.229      ;
+; 1.104 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst6      ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.229      ;
+; 1.104 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst7      ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.229      ;
+; 1.104 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst6|inst8      ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.229      ;
+; 1.105 ; MDR_hxg:inst61|inst13                        ; MDR_hxg:inst61|inst13                        ; CLKi         ; CLKi        ; 0.000        ; 0.000      ; 1.257      ;
+; 1.109 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.263      ;
+; 1.109 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst11     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.263      ;
+; 1.109 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst6      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.263      ;
+; 1.109 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst7      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.263      ;
+; 1.109 ; register8:IRir|inst12                        ; GPR_hxgdly:inst68|register8:inst8|inst8      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.263      ;
+; 1.109 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|9   ; upc_hxgdly:inst11|74161:inst|f74161:sub|9    ; CLKi         ; CLKi        ; 0.000        ; -0.005     ; 1.256      ;
+; 1.115 ; GPR_hxgdly:inst68|register8:inst8|inst8      ; inst34                                       ; CLKi         ; CLKi        ; 0.000        ; 0.041      ; 1.308      ;
+; 1.137 ; MDR_hxg:inst61|inst7                         ; inst34                                       ; CLKi         ; CLKi        ; 0.000        ; 0.025      ; 1.314      ;
+; 1.138 ; GPR_hxgdly:inst68|register8:inst7|inst13     ; MDR_hxg:inst61|inst13                        ; CLKi         ; CLKi        ; 0.000        ; 0.022      ; 1.312      ;
+; 1.152 ; GPR_hxgdly:inst68|register8:inst6|inst11     ; register8:MAR|inst11                         ; CLKi         ; CLKi        ; 0.000        ; -0.058     ; 1.246      ;
+; 1.152 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst10     ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.277      ;
+; 1.152 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.277      ;
+; 1.152 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst6      ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.277      ;
+; 1.152 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst7      ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.277      ;
+; 1.152 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst6|inst8      ; CLKi         ; CLKi        ; 0.000        ; -0.027     ; 1.277      ;
+; 1.158 ; SPR_hxgdly:PC|register8:inst3|inst7          ; SPR_hxgdly:PC|register8:inst1|inst7          ; CLKi         ; CLKi        ; 0.000        ; -0.033     ; 1.277      ;
+; 1.172 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.326      ;
+; 1.172 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst11     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.326      ;
+; 1.172 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst6      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.326      ;
+; 1.172 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst7      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.326      ;
+; 1.172 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst8|inst8      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.326      ;
+; 1.201 ; register8:IRir|inst13                        ; register8:MAR|inst10                         ; CLKi         ; CLKi        ; 0.000        ; -0.093     ; 1.260      ;
+; 1.208 ; GPR_hxgdly:inst68|register8:inst8|inst14     ; register8:MAR|inst14                         ; CLKi         ; CLKi        ; 0.000        ; -0.094     ; 1.266      ;
+; 1.220 ; upc_hxgdly:inst11|74161:inst1|f74161:sub|99  ; upc_hxgdly:inst11|74161:inst|f74161:sub|110  ; CLKi         ; CLKi        ; 0.000        ; -0.001     ; 1.371      ;
+; 1.222 ; SPR_hxgdly:PC|register8:inst1|inst6          ; register8:MAR|inst6                          ; CLKi         ; CLKi        ; 0.000        ; 0.034      ; 1.408      ;
+; 1.227 ; register8:IRir|inst14                        ; MDR_hxg:inst61|inst13                        ; CLKi         ; CLKi        ; 0.000        ; 0.016      ; 1.395      ;
+; 1.228 ; MDR_hxg:inst61|inst11                        ; GPR_hxgdly:inst68|register8:inst9|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.025     ; 1.355      ;
+; 1.228 ; MDR_hxg:inst61|inst11                        ; GPR_hxgdly:inst68|register8:inst6|inst11     ; CLKi         ; CLKi        ; 0.000        ; -0.025     ; 1.355      ;
+; 1.233 ; MDR_hxg:inst61|x                             ; inst34                                       ; CLKi         ; CLKi        ; 0.000        ; 0.019      ; 1.404      ;
+; 1.234 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst13     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.388      ;
+; 1.234 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst11     ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.388      ;
+; 1.234 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst6      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.388      ;
+; 1.234 ; register8:IRir|inst10                        ; GPR_hxgdly:inst68|register8:inst7|inst7      ; CLKi         ; CLKi        ; 0.000        ; 0.002      ; 1.388      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLKi'                                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLKi  ; Rise       ; CLKi                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst6|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst7|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst8|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; GPR_hxgdly:inst68|register8:inst9|inst8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst10                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst10                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst11                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst11                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst12                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst12                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst13                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst13                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst14                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst14                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst6                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst6                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|inst7                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|inst7                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; MDR_hxg:inst61|x                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; MDR_hxg:inst61|x                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst10     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst10     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst11     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst11     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst12     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst12     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst13     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst13     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst14     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst14     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst6      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst6      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst7      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst7      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst8      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst1|inst8      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst2|inst10     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst2|inst10     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLKi  ; Fall       ; SPR_hxgdly:PC|register8:inst2|inst11     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; 89        ; CLKi       ; 1.654 ; 1.654 ; Fall       ; CLKi            ;
+; 90        ; CLKi       ; 1.817 ; 1.817 ; Fall       ; CLKi            ;
+; 92        ; CLKi       ; 1.667 ; 1.667 ; Fall       ; CLKi            ;
+; 94        ; CLKi       ; 4.236 ; 4.236 ; Fall       ; CLKi            ;
+; 95        ; CLKi       ; 4.352 ; 4.352 ; Fall       ; CLKi            ;
+; 99        ; CLKi       ; 1.095 ; 1.095 ; Fall       ; CLKi            ;
+; 101       ; CLKi       ; 0.978 ; 0.978 ; Fall       ; CLKi            ;
+; 103       ; CLKi       ; 0.642 ; 0.642 ; Fall       ; CLKi            ;
+; 104       ; CLKi       ; 0.791 ; 0.791 ; Fall       ; CLKi            ;
+; 105       ; CLKi       ; 3.229 ; 3.229 ; Fall       ; CLKi            ;
+; 106       ; CLKi       ; 3.179 ; 3.179 ; Fall       ; CLKi            ;
+; 112       ; CLKi       ; 2.567 ; 2.567 ; Fall       ; CLKi            ;
+; 113       ; CLKi       ; 1.649 ; 1.649 ; Fall       ; CLKi            ;
+; 114       ; CLKi       ; 1.531 ; 1.531 ; Fall       ; CLKi            ;
+; 115       ; CLKi       ; 1.582 ; 1.582 ; Fall       ; CLKi            ;
+; 116       ; CLKi       ; 3.400 ; 3.400 ; Fall       ; CLKi            ;
+; 117       ; CLKi       ; 3.134 ; 3.134 ; Fall       ; CLKi            ;
+; 118       ; CLKi       ; 3.957 ; 3.957 ; Fall       ; CLKi            ;
+; 127       ; CLKi       ; 4.545 ; 4.545 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 1.052 ; 1.052 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 1.040 ; 1.040 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 1.015 ; 1.015 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 0.892 ; 0.892 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 0.905 ; 0.905 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 0.967 ; 0.967 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 1.052 ; 1.052 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 0.865 ; 0.865 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 0.968 ; 0.968 ; Fall       ; CLKi            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; 89        ; CLKi       ; -0.757 ; -0.757 ; Fall       ; CLKi            ;
+; 90        ; CLKi       ; -0.820 ; -0.820 ; Fall       ; CLKi            ;
+; 92        ; CLKi       ; -0.678 ; -0.678 ; Fall       ; CLKi            ;
+; 94        ; CLKi       ; -1.595 ; -1.595 ; Fall       ; CLKi            ;
+; 95        ; CLKi       ; -1.677 ; -1.677 ; Fall       ; CLKi            ;
+; 99        ; CLKi       ; -0.766 ; -0.766 ; Fall       ; CLKi            ;
+; 101       ; CLKi       ; -0.653 ; -0.653 ; Fall       ; CLKi            ;
+; 103       ; CLKi       ; -0.522 ; -0.522 ; Fall       ; CLKi            ;
+; 104       ; CLKi       ; -0.671 ; -0.671 ; Fall       ; CLKi            ;
+; 105       ; CLKi       ; -1.042 ; -1.042 ; Fall       ; CLKi            ;
+; 106       ; CLKi       ; -1.357 ; -1.357 ; Fall       ; CLKi            ;
+; 112       ; CLKi       ; -0.633 ; -0.633 ; Fall       ; CLKi            ;
+; 113       ; CLKi       ; -0.747 ; -0.747 ; Fall       ; CLKi            ;
+; 114       ; CLKi       ; -0.708 ; -0.708 ; Fall       ; CLKi            ;
+; 115       ; CLKi       ; -0.735 ; -0.735 ; Fall       ; CLKi            ;
+; 116       ; CLKi       ; -0.806 ; -0.806 ; Fall       ; CLKi            ;
+; 117       ; CLKi       ; -0.676 ; -0.676 ; Fall       ; CLKi            ;
+; 118       ; CLKi       ; -0.799 ; -0.799 ; Fall       ; CLKi            ;
+; 127       ; CLKi       ; -0.902 ; -0.902 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; -0.745 ; -0.745 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; -0.920 ; -0.920 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; -0.895 ; -0.895 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; -0.772 ; -0.772 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; -0.785 ; -0.785 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; -0.847 ; -0.847 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; -0.932 ; -0.932 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; -0.745 ; -0.745 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; -0.848 ; -0.848 ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CPuIR_OUT ; CLKi       ; 4.092 ; 4.092 ; Rise       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 4.092 ; 4.092 ; Rise       ; CLKi            ;
+; 34        ; CLKi       ; 6.126 ; 6.126 ; Fall       ; CLKi            ;
+; 35        ; CLKi       ; 5.765 ; 5.765 ; Fall       ; CLKi            ;
+; 37        ; CLKi       ; 5.881 ; 5.881 ; Fall       ; CLKi            ;
+; 39        ; CLKi       ; 5.809 ; 5.809 ; Fall       ; CLKi            ;
+; 40        ; CLKi       ; 5.714 ; 5.714 ; Fall       ; CLKi            ;
+; 41        ; CLKi       ; 5.514 ; 5.514 ; Fall       ; CLKi            ;
+; 43        ; CLKi       ; 5.638 ; 5.638 ; Fall       ; CLKi            ;
+; 44        ; CLKi       ; 5.780 ; 5.780 ; Fall       ; CLKi            ;
+; 151       ; CLKi       ; 5.647 ; 5.647 ; Fall       ; CLKi            ;
+; 152       ; CLKi       ; 5.714 ; 5.714 ; Fall       ; CLKi            ;
+; 160       ; CLKi       ; 5.661 ; 5.661 ; Fall       ; CLKi            ;
+; 161       ; CLKi       ; 5.592 ; 5.592 ; Fall       ; CLKi            ;
+; 162       ; CLKi       ; 5.696 ; 5.696 ; Fall       ; CLKi            ;
+; 163       ; CLKi       ; 5.588 ; 5.588 ; Fall       ; CLKi            ;
+; 168       ; CLKi       ; 5.664 ; 5.664 ; Fall       ; CLKi            ;
+; 169       ; CLKi       ; 5.593 ; 5.593 ; Fall       ; CLKi            ;
+; 170       ; CLKi       ; 5.573 ; 5.573 ; Fall       ; CLKi            ;
+; 171       ; CLKi       ; 5.559 ; 5.559 ; Fall       ; CLKi            ;
+; 173       ; CLKi       ; 5.450 ; 5.450 ; Fall       ; CLKi            ;
+; 175       ; CLKi       ; 5.459 ; 5.459 ; Fall       ; CLKi            ;
+; 176       ; CLKi       ; 5.462 ; 5.462 ; Fall       ; CLKi            ;
+; 179       ; CLKi       ; 5.486 ; 5.486 ; Fall       ; CLKi            ;
+; 180       ; CLKi       ; 5.726 ; 5.726 ; Fall       ; CLKi            ;
+; 181       ; CLKi       ; 5.779 ; 5.779 ; Fall       ; CLKi            ;
+; 182       ; CLKi       ; 5.691 ; 5.691 ; Fall       ; CLKi            ;
+; 185       ; CLKi       ; 5.792 ; 5.792 ; Fall       ; CLKi            ;
+; 187       ; CLKi       ; 5.817 ; 5.817 ; Fall       ; CLKi            ;
+; 188       ; CLKi       ; 5.819 ; 5.819 ; Fall       ; CLKi            ;
+; 189       ; CLKi       ; 5.754 ; 5.754 ; Fall       ; CLKi            ;
+; 191       ; CLKi       ; 5.858 ; 5.858 ; Fall       ; CLKi            ;
+; CPuIR_OUT ; CLKi       ; 7.485 ; 7.485 ; Fall       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 7.485 ; 7.485 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 6.181 ; 6.181 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 5.898 ; 5.898 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 5.965 ; 5.965 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 6.181 ; 6.181 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 6.142 ; 6.142 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 5.790 ; 5.790 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 5.794 ; 5.794 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 6.030 ; 6.030 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 5.908 ; 5.908 ; Fall       ; CLKi            ;
+; WSSB[*]   ; CLKi       ; 6.480 ; 6.480 ; Fall       ; CLKi            ;
+;  WSSB[0]  ; CLKi       ; 5.744 ; 5.744 ; Fall       ; CLKi            ;
+;  WSSB[1]  ; CLKi       ; 6.480 ; 6.480 ; Fall       ; CLKi            ;
+;  WSSB[2]  ; CLKi       ; 6.210 ; 6.210 ; Fall       ; CLKi            ;
+;  WSSB[3]  ; CLKi       ; 5.885 ; 5.885 ; Fall       ; CLKi            ;
+;  WSSB[4]  ; CLKi       ; 5.860 ; 5.860 ; Fall       ; CLKi            ;
+;  WSSB[5]  ; CLKi       ; 6.095 ; 6.095 ; Fall       ; CLKi            ;
+;  WSSB[6]  ; CLKi       ; 5.586 ; 5.586 ; Fall       ; CLKi            ;
+;  WSSB[7]  ; CLKi       ; 6.117 ; 6.117 ; Fall       ; CLKi            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CPuIR_OUT ; CLKi       ; 4.092 ; 4.092 ; Rise       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 4.092 ; 4.092 ; Rise       ; CLKi            ;
+; 34        ; CLKi       ; 6.126 ; 6.126 ; Fall       ; CLKi            ;
+; 35        ; CLKi       ; 5.765 ; 5.765 ; Fall       ; CLKi            ;
+; 37        ; CLKi       ; 5.881 ; 5.881 ; Fall       ; CLKi            ;
+; 39        ; CLKi       ; 5.809 ; 5.809 ; Fall       ; CLKi            ;
+; 40        ; CLKi       ; 5.714 ; 5.714 ; Fall       ; CLKi            ;
+; 41        ; CLKi       ; 5.514 ; 5.514 ; Fall       ; CLKi            ;
+; 43        ; CLKi       ; 5.638 ; 5.638 ; Fall       ; CLKi            ;
+; 44        ; CLKi       ; 5.780 ; 5.780 ; Fall       ; CLKi            ;
+; 151       ; CLKi       ; 5.647 ; 5.647 ; Fall       ; CLKi            ;
+; 152       ; CLKi       ; 5.714 ; 5.714 ; Fall       ; CLKi            ;
+; 160       ; CLKi       ; 5.661 ; 5.661 ; Fall       ; CLKi            ;
+; 161       ; CLKi       ; 5.592 ; 5.592 ; Fall       ; CLKi            ;
+; 162       ; CLKi       ; 5.696 ; 5.696 ; Fall       ; CLKi            ;
+; 163       ; CLKi       ; 5.588 ; 5.588 ; Fall       ; CLKi            ;
+; 168       ; CLKi       ; 5.664 ; 5.664 ; Fall       ; CLKi            ;
+; 169       ; CLKi       ; 5.593 ; 5.593 ; Fall       ; CLKi            ;
+; 170       ; CLKi       ; 5.573 ; 5.573 ; Fall       ; CLKi            ;
+; 171       ; CLKi       ; 5.559 ; 5.559 ; Fall       ; CLKi            ;
+; 173       ; CLKi       ; 5.450 ; 5.450 ; Fall       ; CLKi            ;
+; 175       ; CLKi       ; 5.459 ; 5.459 ; Fall       ; CLKi            ;
+; 176       ; CLKi       ; 5.462 ; 5.462 ; Fall       ; CLKi            ;
+; 179       ; CLKi       ; 5.486 ; 5.486 ; Fall       ; CLKi            ;
+; 180       ; CLKi       ; 5.726 ; 5.726 ; Fall       ; CLKi            ;
+; 181       ; CLKi       ; 5.779 ; 5.779 ; Fall       ; CLKi            ;
+; 182       ; CLKi       ; 5.691 ; 5.691 ; Fall       ; CLKi            ;
+; 185       ; CLKi       ; 5.792 ; 5.792 ; Fall       ; CLKi            ;
+; 187       ; CLKi       ; 5.817 ; 5.817 ; Fall       ; CLKi            ;
+; 188       ; CLKi       ; 5.819 ; 5.819 ; Fall       ; CLKi            ;
+; 189       ; CLKi       ; 5.754 ; 5.754 ; Fall       ; CLKi            ;
+; 191       ; CLKi       ; 5.858 ; 5.858 ; Fall       ; CLKi            ;
+; CPuIR_OUT ; CLKi       ; 4.092 ; 4.092 ; Fall       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 4.092 ; 4.092 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 5.790 ; 5.790 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 5.898 ; 5.898 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 5.965 ; 5.965 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 6.181 ; 6.181 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 6.142 ; 6.142 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 5.790 ; 5.790 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 5.794 ; 5.794 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 6.030 ; 6.030 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 5.908 ; 5.908 ; Fall       ; CLKi            ;
+; WSSB[*]   ; CLKi       ; 5.586 ; 5.586 ; Fall       ; CLKi            ;
+;  WSSB[0]  ; CLKi       ; 5.744 ; 5.744 ; Fall       ; CLKi            ;
+;  WSSB[1]  ; CLKi       ; 6.480 ; 6.480 ; Fall       ; CLKi            ;
+;  WSSB[2]  ; CLKi       ; 6.210 ; 6.210 ; Fall       ; CLKi            ;
+;  WSSB[3]  ; CLKi       ; 5.885 ; 5.885 ; Fall       ; CLKi            ;
+;  WSSB[4]  ; CLKi       ; 5.860 ; 5.860 ; Fall       ; CLKi            ;
+;  WSSB[5]  ; CLKi       ; 6.095 ; 6.095 ; Fall       ; CLKi            ;
+;  WSSB[6]  ; CLKi       ; 5.586 ; 5.586 ; Fall       ; CLKi            ;
+;  WSSB[7]  ; CLKi       ; 6.117 ; 6.117 ; Fall       ; CLKi            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; 99         ; 63          ; 6.775 ;       ;       ; 6.775 ;
+; 99         ; 64          ;       ; 6.791 ; 6.791 ;       ;
+; 101        ; 63          ;       ; 6.666 ; 6.666 ;       ;
+; 101        ; 64          ; 6.664 ;       ;       ; 6.664 ;
+; 102        ; RAMc[0]     ; 5.588 ; 5.588 ; 5.588 ; 5.588 ;
+; 102        ; RAMc[1]     ; 5.588 ; 5.588 ; 5.588 ; 5.588 ;
+; 102        ; RAMc[2]     ; 5.568 ; 5.568 ; 5.568 ; 5.568 ;
+; 102        ; RAMc[3]     ; 5.679 ; 5.679 ; 5.679 ; 5.679 ;
+; 102        ; RAMc[4]     ; 5.689 ; 5.689 ; 5.689 ; 5.689 ;
+; 102        ; RAMc[5]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; 102        ; RAMc[6]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; 102        ; RAMc[7]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; RESET      ; CPuIR_OUT   ;       ; 7.852 ; 7.852 ;       ;
+; RESET      ; MU_RD_N     ;       ; 7.852 ; 7.852 ;       ;
+; START      ; CPuIR_OUT   ;       ; 5.077 ; 5.077 ;       ;
+; START      ; MU_RD_N     ;       ; 5.077 ; 5.077 ;       ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; 99         ; 63          ; 6.775 ;       ;       ; 6.775 ;
+; 99         ; 64          ;       ; 6.791 ; 6.791 ;       ;
+; 101        ; 63          ;       ; 6.666 ; 6.666 ;       ;
+; 101        ; 64          ; 6.664 ;       ;       ; 6.664 ;
+; 102        ; RAMc[0]     ; 5.588 ; 5.588 ; 5.588 ; 5.588 ;
+; 102        ; RAMc[1]     ; 5.588 ; 5.588 ; 5.588 ; 5.588 ;
+; 102        ; RAMc[2]     ; 5.568 ; 5.568 ; 5.568 ; 5.568 ;
+; 102        ; RAMc[3]     ; 5.679 ; 5.679 ; 5.679 ; 5.679 ;
+; 102        ; RAMc[4]     ; 5.689 ; 5.689 ; 5.689 ; 5.689 ;
+; 102        ; RAMc[5]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; 102        ; RAMc[6]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; 102        ; RAMc[7]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; RESET      ; CPuIR_OUT   ;       ; 7.852 ; 7.852 ;       ;
+; RESET      ; MU_RD_N     ;       ; 7.852 ; 7.852 ;       ;
+; START      ; CPuIR_OUT   ;       ; 5.077 ; 5.077 ;       ;
+; START      ; MU_RD_N     ;       ; 5.077 ; 5.077 ;       ;
++------------+-------------+-------+-------+-------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -10.763  ; 0.215 ; N/A      ; N/A     ; -1.941              ;
+;  CLKi            ; -10.763  ; 0.215 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS  ; -770.32  ; 0.0   ; 0.0      ; 0.0     ; -135.501            ;
+;  CLKi            ; -770.320 ; 0.000 ; N/A      ; N/A     ; -135.501            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; 89        ; CLKi       ; 3.861  ; 3.861  ; Fall       ; CLKi            ;
+; 90        ; CLKi       ; 4.296  ; 4.296  ; Fall       ; CLKi            ;
+; 92        ; CLKi       ; 3.852  ; 3.852  ; Fall       ; CLKi            ;
+; 94        ; CLKi       ; 12.169 ; 12.169 ; Fall       ; CLKi            ;
+; 95        ; CLKi       ; 12.644 ; 12.644 ; Fall       ; CLKi            ;
+; 99        ; CLKi       ; 1.712  ; 1.712  ; Fall       ; CLKi            ;
+; 101       ; CLKi       ; 1.478  ; 1.478  ; Fall       ; CLKi            ;
+; 103       ; CLKi       ; 0.642  ; 0.642  ; Fall       ; CLKi            ;
+; 104       ; CLKi       ; 0.791  ; 0.791  ; Fall       ; CLKi            ;
+; 105       ; CLKi       ; 8.685  ; 8.685  ; Fall       ; CLKi            ;
+; 106       ; CLKi       ; 8.428  ; 8.428  ; Fall       ; CLKi            ;
+; 112       ; CLKi       ; 6.654  ; 6.654  ; Fall       ; CLKi            ;
+; 113       ; CLKi       ; 3.852  ; 3.852  ; Fall       ; CLKi            ;
+; 114       ; CLKi       ; 3.446  ; 3.446  ; Fall       ; CLKi            ;
+; 115       ; CLKi       ; 3.560  ; 3.560  ; Fall       ; CLKi            ;
+; 116       ; CLKi       ; 9.252  ; 9.252  ; Fall       ; CLKi            ;
+; 117       ; CLKi       ; 8.479  ; 8.479  ; Fall       ; CLKi            ;
+; 118       ; CLKi       ; 11.378 ; 11.378 ; Fall       ; CLKi            ;
+; 127       ; CLKi       ; 13.109 ; 13.109 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 1.454  ; 1.454  ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 1.454  ; 1.454  ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 1.240  ; 1.240  ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 0.972  ; 0.972  ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 0.905  ; 0.905  ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 1.110  ; 1.110  ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 1.232  ; 1.232  ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 0.865  ; 0.865  ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 1.132  ; 1.132  ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; 89        ; CLKi       ; -0.757 ; -0.757 ; Fall       ; CLKi            ;
+; 90        ; CLKi       ; -0.820 ; -0.820 ; Fall       ; CLKi            ;
+; 92        ; CLKi       ; -0.678 ; -0.678 ; Fall       ; CLKi            ;
+; 94        ; CLKi       ; -1.595 ; -1.595 ; Fall       ; CLKi            ;
+; 95        ; CLKi       ; -1.677 ; -1.677 ; Fall       ; CLKi            ;
+; 99        ; CLKi       ; -0.715 ; -0.715 ; Fall       ; CLKi            ;
+; 101       ; CLKi       ; -0.436 ; -0.436 ; Fall       ; CLKi            ;
+; 103       ; CLKi       ; -0.238 ; -0.238 ; Fall       ; CLKi            ;
+; 104       ; CLKi       ; -0.317 ; -0.317 ; Fall       ; CLKi            ;
+; 105       ; CLKi       ; -1.042 ; -1.042 ; Fall       ; CLKi            ;
+; 106       ; CLKi       ; -1.357 ; -1.357 ; Fall       ; CLKi            ;
+; 112       ; CLKi       ; -0.438 ; -0.438 ; Fall       ; CLKi            ;
+; 113       ; CLKi       ; -0.747 ; -0.747 ; Fall       ; CLKi            ;
+; 114       ; CLKi       ; -0.708 ; -0.708 ; Fall       ; CLKi            ;
+; 115       ; CLKi       ; -0.735 ; -0.735 ; Fall       ; CLKi            ;
+; 116       ; CLKi       ; -0.806 ; -0.806 ; Fall       ; CLKi            ;
+; 117       ; CLKi       ; -0.224 ; -0.224 ; Fall       ; CLKi            ;
+; 118       ; CLKi       ; -0.799 ; -0.799 ; Fall       ; CLKi            ;
+; 127       ; CLKi       ; -0.902 ; -0.902 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; -0.555 ; -0.555 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; -0.920 ; -0.920 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; -0.895 ; -0.895 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; -0.706 ; -0.706 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; -0.616 ; -0.616 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; -0.844 ; -0.844 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; -0.932 ; -0.932 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; -0.555 ; -0.555 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; -0.848 ; -0.848 ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; CPuIR_OUT ; CLKi       ; 9.907  ; 9.907  ; Rise       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 9.907  ; 9.907  ; Rise       ; CLKi            ;
+; 34        ; CLKi       ; 15.201 ; 15.201 ; Fall       ; CLKi            ;
+; 35        ; CLKi       ; 14.312 ; 14.312 ; Fall       ; CLKi            ;
+; 37        ; CLKi       ; 14.873 ; 14.873 ; Fall       ; CLKi            ;
+; 39        ; CLKi       ; 14.416 ; 14.416 ; Fall       ; CLKi            ;
+; 40        ; CLKi       ; 14.213 ; 14.213 ; Fall       ; CLKi            ;
+; 41        ; CLKi       ; 13.201 ; 13.201 ; Fall       ; CLKi            ;
+; 43        ; CLKi       ; 13.752 ; 13.752 ; Fall       ; CLKi            ;
+; 44        ; CLKi       ; 14.310 ; 14.310 ; Fall       ; CLKi            ;
+; 151       ; CLKi       ; 13.869 ; 13.869 ; Fall       ; CLKi            ;
+; 152       ; CLKi       ; 14.085 ; 14.085 ; Fall       ; CLKi            ;
+; 160       ; CLKi       ; 13.947 ; 13.947 ; Fall       ; CLKi            ;
+; 161       ; CLKi       ; 13.641 ; 13.641 ; Fall       ; CLKi            ;
+; 162       ; CLKi       ; 14.025 ; 14.025 ; Fall       ; CLKi            ;
+; 163       ; CLKi       ; 13.667 ; 13.667 ; Fall       ; CLKi            ;
+; 168       ; CLKi       ; 13.961 ; 13.961 ; Fall       ; CLKi            ;
+; 169       ; CLKi       ; 13.691 ; 13.691 ; Fall       ; CLKi            ;
+; 170       ; CLKi       ; 13.652 ; 13.652 ; Fall       ; CLKi            ;
+; 171       ; CLKi       ; 13.629 ; 13.629 ; Fall       ; CLKi            ;
+; 173       ; CLKi       ; 13.279 ; 13.279 ; Fall       ; CLKi            ;
+; 175       ; CLKi       ; 13.276 ; 13.276 ; Fall       ; CLKi            ;
+; 176       ; CLKi       ; 13.279 ; 13.279 ; Fall       ; CLKi            ;
+; 179       ; CLKi       ; 13.310 ; 13.310 ; Fall       ; CLKi            ;
+; 180       ; CLKi       ; 13.645 ; 13.645 ; Fall       ; CLKi            ;
+; 181       ; CLKi       ; 13.787 ; 13.787 ; Fall       ; CLKi            ;
+; 182       ; CLKi       ; 13.602 ; 13.602 ; Fall       ; CLKi            ;
+; 185       ; CLKi       ; 13.952 ; 13.952 ; Fall       ; CLKi            ;
+; 187       ; CLKi       ; 13.987 ; 13.987 ; Fall       ; CLKi            ;
+; 188       ; CLKi       ; 13.991 ; 13.991 ; Fall       ; CLKi            ;
+; 189       ; CLKi       ; 13.629 ; 13.629 ; Fall       ; CLKi            ;
+; 191       ; CLKi       ; 13.979 ; 13.979 ; Fall       ; CLKi            ;
+; CPuIR_OUT ; CLKi       ; 18.923 ; 18.923 ; Fall       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 18.923 ; 18.923 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 15.320 ; 15.320 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 14.141 ; 14.141 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 14.575 ; 14.575 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 15.320 ; 15.320 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 15.231 ; 15.231 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 13.865 ; 13.865 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 13.806 ; 13.806 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 14.839 ; 14.839 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 14.197 ; 14.197 ; Fall       ; CLKi            ;
+; WSSB[*]   ; CLKi       ; 15.792 ; 15.792 ; Fall       ; CLKi            ;
+;  WSSB[0]  ; CLKi       ; 13.830 ; 13.830 ; Fall       ; CLKi            ;
+;  WSSB[1]  ; CLKi       ; 15.792 ; 15.792 ; Fall       ; CLKi            ;
+;  WSSB[2]  ; CLKi       ; 15.594 ; 15.594 ; Fall       ; CLKi            ;
+;  WSSB[3]  ; CLKi       ; 14.552 ; 14.552 ; Fall       ; CLKi            ;
+;  WSSB[4]  ; CLKi       ; 14.207 ; 14.207 ; Fall       ; CLKi            ;
+;  WSSB[5]  ; CLKi       ; 14.780 ; 14.780 ; Fall       ; CLKi            ;
+;  WSSB[6]  ; CLKi       ; 13.688 ; 13.688 ; Fall       ; CLKi            ;
+;  WSSB[7]  ; CLKi       ; 15.042 ; 15.042 ; Fall       ; CLKi            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; CPuIR_OUT ; CLKi       ; 4.092 ; 4.092 ; Rise       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 4.092 ; 4.092 ; Rise       ; CLKi            ;
+; 34        ; CLKi       ; 6.126 ; 6.126 ; Fall       ; CLKi            ;
+; 35        ; CLKi       ; 5.765 ; 5.765 ; Fall       ; CLKi            ;
+; 37        ; CLKi       ; 5.881 ; 5.881 ; Fall       ; CLKi            ;
+; 39        ; CLKi       ; 5.809 ; 5.809 ; Fall       ; CLKi            ;
+; 40        ; CLKi       ; 5.714 ; 5.714 ; Fall       ; CLKi            ;
+; 41        ; CLKi       ; 5.514 ; 5.514 ; Fall       ; CLKi            ;
+; 43        ; CLKi       ; 5.638 ; 5.638 ; Fall       ; CLKi            ;
+; 44        ; CLKi       ; 5.780 ; 5.780 ; Fall       ; CLKi            ;
+; 151       ; CLKi       ; 5.647 ; 5.647 ; Fall       ; CLKi            ;
+; 152       ; CLKi       ; 5.714 ; 5.714 ; Fall       ; CLKi            ;
+; 160       ; CLKi       ; 5.661 ; 5.661 ; Fall       ; CLKi            ;
+; 161       ; CLKi       ; 5.592 ; 5.592 ; Fall       ; CLKi            ;
+; 162       ; CLKi       ; 5.696 ; 5.696 ; Fall       ; CLKi            ;
+; 163       ; CLKi       ; 5.588 ; 5.588 ; Fall       ; CLKi            ;
+; 168       ; CLKi       ; 5.664 ; 5.664 ; Fall       ; CLKi            ;
+; 169       ; CLKi       ; 5.593 ; 5.593 ; Fall       ; CLKi            ;
+; 170       ; CLKi       ; 5.573 ; 5.573 ; Fall       ; CLKi            ;
+; 171       ; CLKi       ; 5.559 ; 5.559 ; Fall       ; CLKi            ;
+; 173       ; CLKi       ; 5.450 ; 5.450 ; Fall       ; CLKi            ;
+; 175       ; CLKi       ; 5.459 ; 5.459 ; Fall       ; CLKi            ;
+; 176       ; CLKi       ; 5.462 ; 5.462 ; Fall       ; CLKi            ;
+; 179       ; CLKi       ; 5.486 ; 5.486 ; Fall       ; CLKi            ;
+; 180       ; CLKi       ; 5.726 ; 5.726 ; Fall       ; CLKi            ;
+; 181       ; CLKi       ; 5.779 ; 5.779 ; Fall       ; CLKi            ;
+; 182       ; CLKi       ; 5.691 ; 5.691 ; Fall       ; CLKi            ;
+; 185       ; CLKi       ; 5.792 ; 5.792 ; Fall       ; CLKi            ;
+; 187       ; CLKi       ; 5.817 ; 5.817 ; Fall       ; CLKi            ;
+; 188       ; CLKi       ; 5.819 ; 5.819 ; Fall       ; CLKi            ;
+; 189       ; CLKi       ; 5.754 ; 5.754 ; Fall       ; CLKi            ;
+; 191       ; CLKi       ; 5.858 ; 5.858 ; Fall       ; CLKi            ;
+; CPuIR_OUT ; CLKi       ; 4.092 ; 4.092 ; Fall       ; CLKi            ;
+; MU_RD_N   ; CLKi       ; 4.092 ; 4.092 ; Fall       ; CLKi            ;
+; RAMc[*]   ; CLKi       ; 5.790 ; 5.790 ; Fall       ; CLKi            ;
+;  RAMc[0]  ; CLKi       ; 5.898 ; 5.898 ; Fall       ; CLKi            ;
+;  RAMc[1]  ; CLKi       ; 5.965 ; 5.965 ; Fall       ; CLKi            ;
+;  RAMc[2]  ; CLKi       ; 6.181 ; 6.181 ; Fall       ; CLKi            ;
+;  RAMc[3]  ; CLKi       ; 6.142 ; 6.142 ; Fall       ; CLKi            ;
+;  RAMc[4]  ; CLKi       ; 5.790 ; 5.790 ; Fall       ; CLKi            ;
+;  RAMc[5]  ; CLKi       ; 5.794 ; 5.794 ; Fall       ; CLKi            ;
+;  RAMc[6]  ; CLKi       ; 6.030 ; 6.030 ; Fall       ; CLKi            ;
+;  RAMc[7]  ; CLKi       ; 5.908 ; 5.908 ; Fall       ; CLKi            ;
+; WSSB[*]   ; CLKi       ; 5.586 ; 5.586 ; Fall       ; CLKi            ;
+;  WSSB[0]  ; CLKi       ; 5.744 ; 5.744 ; Fall       ; CLKi            ;
+;  WSSB[1]  ; CLKi       ; 6.480 ; 6.480 ; Fall       ; CLKi            ;
+;  WSSB[2]  ; CLKi       ; 6.210 ; 6.210 ; Fall       ; CLKi            ;
+;  WSSB[3]  ; CLKi       ; 5.885 ; 5.885 ; Fall       ; CLKi            ;
+;  WSSB[4]  ; CLKi       ; 5.860 ; 5.860 ; Fall       ; CLKi            ;
+;  WSSB[5]  ; CLKi       ; 6.095 ; 6.095 ; Fall       ; CLKi            ;
+;  WSSB[6]  ; CLKi       ; 5.586 ; 5.586 ; Fall       ; CLKi            ;
+;  WSSB[7]  ; CLKi       ; 6.117 ; 6.117 ; Fall       ; CLKi            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; 99         ; 63          ; 15.550 ;        ;        ; 15.550 ;
+; 99         ; 64          ;        ; 15.687 ; 15.687 ;        ;
+; 101        ; 63          ;        ; 15.431 ; 15.431 ;        ;
+; 101        ; 64          ; 15.372 ;        ;        ; 15.372 ;
+; 102        ; RAMc[0]     ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
+; 102        ; RAMc[1]     ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
+; 102        ; RAMc[2]     ; 11.525 ; 11.525 ; 11.525 ; 11.525 ;
+; 102        ; RAMc[3]     ; 11.888 ; 11.888 ; 11.888 ; 11.888 ;
+; 102        ; RAMc[4]     ; 11.898 ; 11.898 ; 11.898 ; 11.898 ;
+; 102        ; RAMc[5]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; 102        ; RAMc[6]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; 102        ; RAMc[7]     ; 11.920 ; 11.920 ; 11.920 ; 11.920 ;
+; RESET      ; CPuIR_OUT   ;        ; 18.442 ; 18.442 ;        ;
+; RESET      ; MU_RD_N     ;        ; 18.442 ; 18.442 ;        ;
+; START      ; CPuIR_OUT   ;        ; 13.024 ; 13.024 ;        ;
+; START      ; MU_RD_N     ;        ; 13.024 ; 13.024 ;        ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; 99         ; 63          ; 6.775 ;       ;       ; 6.775 ;
+; 99         ; 64          ;       ; 6.791 ; 6.791 ;       ;
+; 101        ; 63          ;       ; 6.666 ; 6.666 ;       ;
+; 101        ; 64          ; 6.664 ;       ;       ; 6.664 ;
+; 102        ; RAMc[0]     ; 5.588 ; 5.588 ; 5.588 ; 5.588 ;
+; 102        ; RAMc[1]     ; 5.588 ; 5.588 ; 5.588 ; 5.588 ;
+; 102        ; RAMc[2]     ; 5.568 ; 5.568 ; 5.568 ; 5.568 ;
+; 102        ; RAMc[3]     ; 5.679 ; 5.679 ; 5.679 ; 5.679 ;
+; 102        ; RAMc[4]     ; 5.689 ; 5.689 ; 5.689 ; 5.689 ;
+; 102        ; RAMc[5]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; 102        ; RAMc[6]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; 102        ; RAMc[7]     ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; RESET      ; CPuIR_OUT   ;       ; 7.852 ; 7.852 ;       ;
+; RESET      ; MU_RD_N     ;       ; 7.852 ; 7.852 ;       ;
+; START      ; CPuIR_OUT   ;       ; 5.077 ; 5.077 ;       ;
+; START      ; MU_RD_N     ;       ; 5.077 ; 5.077 ;       ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLKi       ; CLKi     ; 0        ; 0        ; 0        ; 14814    ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLKi       ; CLKi     ; 0        ; 0        ; 0        ; 14814    ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 31    ; 31   ;
+; Unconstrained Input Port Paths  ; 926   ; 926  ;
+; Unconstrained Output Ports      ; 50    ; 50   ;
+; Unconstrained Output Port Paths ; 68    ; 68   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri May 29 00:11:21 2026
+Info: Command: quartus_sta exp_final_hxgdly -c exp_final_hxgdly
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'exp_final_hxgdly.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLKi CLKi
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -10.763
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -10.763      -770.320 CLKi 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 CLKi 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941      -135.501 CLKi 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.591
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.591      -175.117 CLKi 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLKi 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -91.380 CLKi 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4553 megabytes
+    Info: Processing ended: Fri May 29 00:11:21 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

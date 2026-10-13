@@ -1,0 +1,139 @@
+|next8bit_hxg
+NEXT_ADDR[0] <= next:inst15.Y
+NEXT_ADDR[1] <= next:inst14.Y
+NEXT_ADDR[2] <= next:inst13.Y
+NEXT_ADDR[3] <= next:inst12.Y
+NEXT_ADDR[4] <= next:inst11.Y
+NEXT_ADDR[5] <= next:inst10.Y
+NEXT_ADDR[6] <= next:inst9.Y
+NEXT_ADDR[7] <= next:inst8.Y
+UADDR[0] => next:inst15.A
+UADDR[1] => next:inst14.A
+UADDR[2] => next:inst13.A
+UADDR[3] => next:inst12.A
+UADDR[4] => next:inst11.A
+UADDR[5] => next:inst10.A
+UADDR[6] => next:inst9.A
+UADDR[7] => next:inst8.A
+SEL_ADDR => next:inst15.SEL_ADDR
+SEL_ADDR => next:inst14.SEL_ADDR
+SEL_ADDR => next:inst13.SEL_ADDR
+SEL_ADDR => next:inst12.SEL_ADDR
+SEL_ADDR => next:inst11.SEL_ADDR
+SEL_ADDR => next:inst10.SEL_ADDR
+SEL_ADDR => next:inst9.SEL_ADDR
+SEL_ADDR => next:inst8.SEL_ADDR
+XADDR[0] => next:inst15.XADDR
+XADDR[1] => next:inst14.XADDR
+XADDR[2] => next:inst13.XADDR
+XADDR[3] => next:inst12.XADDR
+XADDR[4] => next:inst11.XADDR
+XADDR[5] => next:inst10.XADDR
+XADDR[6] => next:inst9.XADDR
+XADDR[7] => next:inst8.XADDR
+SEL_XMJP => next:inst15.SEL_XMJP
+SEL_XMJP => next:inst14.SEL_XMJP
+SEL_XMJP => next:inst13.SEL_XMJP
+SEL_XMJP => next:inst12.SEL_XMJP
+SEL_XMJP => next:inst11.SEL_XMJP
+SEL_XMJP => next:inst10.SEL_XMJP
+SEL_XMJP => next:inst9.SEL_XMJP
+SEL_XMJP => next:inst8.SEL_XMJP
+QADDR[0] => next:inst15.Q
+QADDR[1] => next:inst14.Q
+QADDR[2] => next:inst13.Q
+QADDR[3] => next:inst12.Q
+QADDR[4] => next:inst11.Q
+QADDR[5] => next:inst10.Q
+QADDR[6] => next:inst9.Q
+QADDR[7] => next:inst8.Q
+SEL_QJP => next:inst15.SEL_QJP
+SEL_QJP => next:inst14.SEL_QJP
+SEL_QJP => next:inst13.SEL_QJP
+SEL_QJP => next:inst12.SEL_QJP
+SEL_QJP => next:inst11.SEL_QJP
+SEL_QJP => next:inst10.SEL_QJP
+SEL_QJP => next:inst9.SEL_QJP
+SEL_QJP => next:inst8.SEL_QJP
+
+
+|next8bit_hxg|next:inst15
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+
+|next8bit_hxg|next:inst14
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+
+|next8bit_hxg|next:inst13
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+
+|next8bit_hxg|next:inst12
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+
+|next8bit_hxg|next:inst11
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+
+|next8bit_hxg|next:inst10
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+
+|next8bit_hxg|next:inst9
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+
+|next8bit_hxg|next:inst8
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+XADDR => inst7.IN0
+SEL_XMJP => inst7.IN1
+Q => inst6.IN0
+SEL_QJP => inst6.IN1
+A => inst.IN0
+SEL_ADDR => inst.IN1
+
+

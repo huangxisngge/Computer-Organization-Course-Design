@@ -1,0 +1,43 @@
+|sel1bit
+Y[0] <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B[0] => inst23.IN0
+B[1] => inst20.IN0
+B[2] => inst17.IN0
+B[3] => inst14.IN0
+B[4] => inst11.IN0
+B[5] => inst8.IN0
+B[6] => inst4.IN0
+B[7] => inst2.IN0
+by => inst23.IN1
+by => inst20.IN1
+by => inst17.IN1
+by => inst14.IN1
+by => inst11.IN1
+by => inst8.IN1
+by => inst4.IN1
+by => inst2.IN1
+A[0] => inst22.IN0
+A[1] => inst19.IN0
+A[2] => inst16.IN0
+A[3] => inst13.IN0
+A[4] => inst10.IN0
+A[5] => inst7.IN0
+A[6] => inst3.IN0
+A[7] => inst1.IN0
+ay => inst22.IN1
+ay => inst19.IN1
+ay => inst16.IN1
+ay => inst13.IN1
+ay => inst10.IN1
+ay => inst7.IN1
+ay => inst3.IN1
+ay => inst1.IN1
+
+

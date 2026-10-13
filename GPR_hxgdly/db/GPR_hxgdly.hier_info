@@ -1,0 +1,1023 @@
+|GPR_hxgdly
+GR_A[0] <= select1_from_4_hxgdly:inst1.Y[0]
+GR_A[1] <= select1_from_4_hxgdly:inst1.Y[1]
+GR_A[2] <= select1_from_4_hxgdly:inst1.Y[2]
+GR_A[3] <= select1_from_4_hxgdly:inst1.Y[3]
+GR_A[4] <= select1_from_4_hxgdly:inst1.Y[4]
+GR_A[5] <= select1_from_4_hxgdly:inst1.Y[5]
+GR_A[6] <= select1_from_4_hxgdly:inst1.Y[6]
+GR_A[7] <= select1_from_4_hxgdly:inst1.Y[7]
+CLR => register8:inst9.CLR
+CLR => register8:inst8.CLR
+CLR => register8:inst7.CLR
+CLR => register8:inst6.CLR
+CLK => register8:inst9.CP_time
+CLK => register8:inst8.CP_time
+CLK => register8:inst7.CP_time
+CLK => register8:inst6.CP_time
+WSEL[0] => decoder2to4_hxgdly:inst5.SEL[0]
+WSEL[1] => decoder2to4_hxgdly:inst5.SEL[1]
+WE => inst.IN1
+WE => inst16.IN1
+WE => inst15.IN1
+WE => inst17.IN1
+WIN[0] => register8:inst9.D[0]
+WIN[0] => register8:inst8.D[0]
+WIN[0] => register8:inst7.D[0]
+WIN[0] => register8:inst6.D[0]
+WIN[1] => register8:inst9.D[1]
+WIN[1] => register8:inst8.D[1]
+WIN[1] => register8:inst7.D[1]
+WIN[1] => register8:inst6.D[1]
+WIN[2] => register8:inst9.D[2]
+WIN[2] => register8:inst8.D[2]
+WIN[2] => register8:inst7.D[2]
+WIN[2] => register8:inst6.D[2]
+WIN[3] => register8:inst9.D[3]
+WIN[3] => register8:inst8.D[3]
+WIN[3] => register8:inst7.D[3]
+WIN[3] => register8:inst6.D[3]
+WIN[4] => register8:inst9.D[4]
+WIN[4] => register8:inst8.D[4]
+WIN[4] => register8:inst7.D[4]
+WIN[4] => register8:inst6.D[4]
+WIN[5] => register8:inst9.D[5]
+WIN[5] => register8:inst8.D[5]
+WIN[5] => register8:inst7.D[5]
+WIN[5] => register8:inst6.D[5]
+WIN[6] => register8:inst9.D[6]
+WIN[6] => register8:inst8.D[6]
+WIN[6] => register8:inst7.D[6]
+WIN[6] => register8:inst6.D[6]
+WIN[7] => register8:inst9.D[7]
+WIN[7] => register8:inst8.D[7]
+WIN[7] => register8:inst7.D[7]
+WIN[7] => register8:inst6.D[7]
+ASEL[0] => select1_from_4_hxgdly:inst1.SEL[0]
+ASEL[1] => select1_from_4_hxgdly:inst1.SEL[1]
+GR_B[0] <= select1_from_4_hxgdly:inst2.Y[0]
+GR_B[1] <= select1_from_4_hxgdly:inst2.Y[1]
+GR_B[2] <= select1_from_4_hxgdly:inst2.Y[2]
+GR_B[3] <= select1_from_4_hxgdly:inst2.Y[3]
+GR_B[4] <= select1_from_4_hxgdly:inst2.Y[4]
+GR_B[5] <= select1_from_4_hxgdly:inst2.Y[5]
+GR_B[6] <= select1_from_4_hxgdly:inst2.Y[6]
+GR_B[7] <= select1_from_4_hxgdly:inst2.Y[7]
+BSEL[0] => select1_from_4_hxgdly:inst2.SEL[0]
+BSEL[1] => select1_from_4_hxgdly:inst2.SEL[1]
+GR_K[0] <= select1_from_4_hxgdly:inst3.Y[0]
+GR_K[1] <= select1_from_4_hxgdly:inst3.Y[1]
+GR_K[2] <= select1_from_4_hxgdly:inst3.Y[2]
+GR_K[3] <= select1_from_4_hxgdly:inst3.Y[3]
+GR_K[4] <= select1_from_4_hxgdly:inst3.Y[4]
+GR_K[5] <= select1_from_4_hxgdly:inst3.Y[5]
+GR_K[6] <= select1_from_4_hxgdly:inst3.Y[6]
+GR_K[7] <= select1_from_4_hxgdly:inst3.Y[7]
+KSEL[0] => select1_from_4_hxgdly:inst3.SEL[0]
+KSEL[1] => select1_from_4_hxgdly:inst3.SEL[1]
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst1
+Y[0] <= selection:inst3.y0
+Y[1] <= selection:inst3.y1
+Y[2] <= selection:inst3.y2
+Y[3] <= selection:inst3.y3
+Y[4] <= selection:inst3.y4
+Y[5] <= selection:inst3.y5
+Y[6] <= selection:inst3.y6
+Y[7] <= selection:inst3.y7
+D0[0] => selection:inst2.a0
+D0[1] => selection:inst2.a1
+D0[2] => selection:inst2.a2
+D0[3] => selection:inst2.a3
+D0[4] => selection:inst2.a4
+D0[5] => selection:inst2.a5
+D0[6] => selection:inst2.a6
+D0[7] => selection:inst2.a7
+D1[0] => selection:inst2.b0
+D1[1] => selection:inst2.b1
+D1[2] => selection:inst2.b2
+D1[3] => selection:inst2.b3
+D1[4] => selection:inst2.b4
+D1[5] => selection:inst2.b5
+D1[6] => selection:inst2.b6
+D1[7] => selection:inst2.b7
+SEL[0] => inst7.IN0
+SEL[0] => selection:inst2.by
+SEL[0] => selection:inst4.by
+SEL[1] => inst.IN0
+SEL[1] => selection:inst3.by
+D2[0] => selection:inst4.a0
+D2[1] => selection:inst4.a1
+D2[2] => selection:inst4.a2
+D2[3] => selection:inst4.a3
+D2[4] => selection:inst4.a4
+D2[5] => selection:inst4.a5
+D2[6] => selection:inst4.a6
+D2[7] => selection:inst4.a7
+D3[0] => selection:inst4.b0
+D3[1] => selection:inst4.b1
+D3[2] => selection:inst4.b2
+D3[3] => selection:inst4.b3
+D3[4] => selection:inst4.b4
+D3[5] => selection:inst4.b5
+D3[6] => selection:inst4.b6
+D3[7] => selection:inst4.b7
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst1|selection:inst3
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst1|selection:inst2
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst1|selection:inst4
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|register8:inst9
+Q[0] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst16.IN0
+CP_time => inst13.CLK
+CP_time => inst14.CLK
+CP_time => inst12.CLK
+CP_time => inst11.CLK
+CP_time => inst6.CLK
+CP_time => inst7.CLK
+CP_time => inst8.CLK
+CP_time => inst10.CLK
+WEN => mux2_1:inst25.SEL
+WEN => mux2_1:inst24.SEL
+WEN => mux2_1:inst23.SEL
+WEN => mux2_1:inst21.SEL
+WEN => mux2_1:inst20.SEL
+WEN => mux2_1:inst19.SEL
+WEN => mux2_1:inst18.SEL
+WEN => mux2_1:inst22.SEL
+D[0] => mux2_1:inst25.B
+D[1] => mux2_1:inst24.B
+D[2] => mux2_1:inst23.B
+D[3] => mux2_1:inst22.B
+D[4] => mux2_1:inst21.B
+D[5] => mux2_1:inst20.B
+D[6] => mux2_1:inst19.B
+D[7] => mux2_1:inst18.B
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst25
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst24
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst23
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst21
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst20
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst19
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst18
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst9|mux2_1:inst22
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|decoder2to4_hxgdly:inst5
+Y[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SEL[0] => inst.IN0
+SEL[0] => inst2.IN1
+SEL[0] => inst5.IN1
+SEL[1] => inst4.IN0
+SEL[1] => inst2.IN0
+SEL[1] => inst1.IN0
+
+
+|GPR_hxgdly|register8:inst8
+Q[0] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst16.IN0
+CP_time => inst13.CLK
+CP_time => inst14.CLK
+CP_time => inst12.CLK
+CP_time => inst11.CLK
+CP_time => inst6.CLK
+CP_time => inst7.CLK
+CP_time => inst8.CLK
+CP_time => inst10.CLK
+WEN => mux2_1:inst25.SEL
+WEN => mux2_1:inst24.SEL
+WEN => mux2_1:inst23.SEL
+WEN => mux2_1:inst21.SEL
+WEN => mux2_1:inst20.SEL
+WEN => mux2_1:inst19.SEL
+WEN => mux2_1:inst18.SEL
+WEN => mux2_1:inst22.SEL
+D[0] => mux2_1:inst25.B
+D[1] => mux2_1:inst24.B
+D[2] => mux2_1:inst23.B
+D[3] => mux2_1:inst22.B
+D[4] => mux2_1:inst21.B
+D[5] => mux2_1:inst20.B
+D[6] => mux2_1:inst19.B
+D[7] => mux2_1:inst18.B
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst25
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst24
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst23
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst21
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst20
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst19
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst18
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst8|mux2_1:inst22
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7
+Q[0] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst16.IN0
+CP_time => inst13.CLK
+CP_time => inst14.CLK
+CP_time => inst12.CLK
+CP_time => inst11.CLK
+CP_time => inst6.CLK
+CP_time => inst7.CLK
+CP_time => inst8.CLK
+CP_time => inst10.CLK
+WEN => mux2_1:inst25.SEL
+WEN => mux2_1:inst24.SEL
+WEN => mux2_1:inst23.SEL
+WEN => mux2_1:inst21.SEL
+WEN => mux2_1:inst20.SEL
+WEN => mux2_1:inst19.SEL
+WEN => mux2_1:inst18.SEL
+WEN => mux2_1:inst22.SEL
+D[0] => mux2_1:inst25.B
+D[1] => mux2_1:inst24.B
+D[2] => mux2_1:inst23.B
+D[3] => mux2_1:inst22.B
+D[4] => mux2_1:inst21.B
+D[5] => mux2_1:inst20.B
+D[6] => mux2_1:inst19.B
+D[7] => mux2_1:inst18.B
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst25
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst24
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst23
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst21
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst20
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst19
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst18
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst7|mux2_1:inst22
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6
+Q[0] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst16.IN0
+CP_time => inst13.CLK
+CP_time => inst14.CLK
+CP_time => inst12.CLK
+CP_time => inst11.CLK
+CP_time => inst6.CLK
+CP_time => inst7.CLK
+CP_time => inst8.CLK
+CP_time => inst10.CLK
+WEN => mux2_1:inst25.SEL
+WEN => mux2_1:inst24.SEL
+WEN => mux2_1:inst23.SEL
+WEN => mux2_1:inst21.SEL
+WEN => mux2_1:inst20.SEL
+WEN => mux2_1:inst19.SEL
+WEN => mux2_1:inst18.SEL
+WEN => mux2_1:inst22.SEL
+D[0] => mux2_1:inst25.B
+D[1] => mux2_1:inst24.B
+D[2] => mux2_1:inst23.B
+D[3] => mux2_1:inst22.B
+D[4] => mux2_1:inst21.B
+D[5] => mux2_1:inst20.B
+D[6] => mux2_1:inst19.B
+D[7] => mux2_1:inst18.B
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst25
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst24
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst23
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst21
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst20
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst19
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst18
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|register8:inst6|mux2_1:inst22
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+B => inst4.IN0
+SEL => inst4.IN1
+SEL => inst.IN0
+A => inst3.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst2
+Y[0] <= selection:inst3.y0
+Y[1] <= selection:inst3.y1
+Y[2] <= selection:inst3.y2
+Y[3] <= selection:inst3.y3
+Y[4] <= selection:inst3.y4
+Y[5] <= selection:inst3.y5
+Y[6] <= selection:inst3.y6
+Y[7] <= selection:inst3.y7
+D0[0] => selection:inst2.a0
+D0[1] => selection:inst2.a1
+D0[2] => selection:inst2.a2
+D0[3] => selection:inst2.a3
+D0[4] => selection:inst2.a4
+D0[5] => selection:inst2.a5
+D0[6] => selection:inst2.a6
+D0[7] => selection:inst2.a7
+D1[0] => selection:inst2.b0
+D1[1] => selection:inst2.b1
+D1[2] => selection:inst2.b2
+D1[3] => selection:inst2.b3
+D1[4] => selection:inst2.b4
+D1[5] => selection:inst2.b5
+D1[6] => selection:inst2.b6
+D1[7] => selection:inst2.b7
+SEL[0] => inst7.IN0
+SEL[0] => selection:inst2.by
+SEL[0] => selection:inst4.by
+SEL[1] => inst.IN0
+SEL[1] => selection:inst3.by
+D2[0] => selection:inst4.a0
+D2[1] => selection:inst4.a1
+D2[2] => selection:inst4.a2
+D2[3] => selection:inst4.a3
+D2[4] => selection:inst4.a4
+D2[5] => selection:inst4.a5
+D2[6] => selection:inst4.a6
+D2[7] => selection:inst4.a7
+D3[0] => selection:inst4.b0
+D3[1] => selection:inst4.b1
+D3[2] => selection:inst4.b2
+D3[3] => selection:inst4.b3
+D3[4] => selection:inst4.b4
+D3[5] => selection:inst4.b5
+D3[6] => selection:inst4.b6
+D3[7] => selection:inst4.b7
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst2|selection:inst3
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst2|selection:inst2
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst2|selection:inst4
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst3
+Y[0] <= selection:inst3.y0
+Y[1] <= selection:inst3.y1
+Y[2] <= selection:inst3.y2
+Y[3] <= selection:inst3.y3
+Y[4] <= selection:inst3.y4
+Y[5] <= selection:inst3.y5
+Y[6] <= selection:inst3.y6
+Y[7] <= selection:inst3.y7
+D0[0] => selection:inst2.a0
+D0[1] => selection:inst2.a1
+D0[2] => selection:inst2.a2
+D0[3] => selection:inst2.a3
+D0[4] => selection:inst2.a4
+D0[5] => selection:inst2.a5
+D0[6] => selection:inst2.a6
+D0[7] => selection:inst2.a7
+D1[0] => selection:inst2.b0
+D1[1] => selection:inst2.b1
+D1[2] => selection:inst2.b2
+D1[3] => selection:inst2.b3
+D1[4] => selection:inst2.b4
+D1[5] => selection:inst2.b5
+D1[6] => selection:inst2.b6
+D1[7] => selection:inst2.b7
+SEL[0] => inst7.IN0
+SEL[0] => selection:inst2.by
+SEL[0] => selection:inst4.by
+SEL[1] => inst.IN0
+SEL[1] => selection:inst3.by
+D2[0] => selection:inst4.a0
+D2[1] => selection:inst4.a1
+D2[2] => selection:inst4.a2
+D2[3] => selection:inst4.a3
+D2[4] => selection:inst4.a4
+D2[5] => selection:inst4.a5
+D2[6] => selection:inst4.a6
+D2[7] => selection:inst4.a7
+D3[0] => selection:inst4.b0
+D3[1] => selection:inst4.b1
+D3[2] => selection:inst4.b2
+D3[3] => selection:inst4.b3
+D3[4] => selection:inst4.b4
+D3[5] => selection:inst4.b5
+D3[6] => selection:inst4.b6
+D3[7] => selection:inst4.b7
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst3|selection:inst3
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst3|selection:inst2
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+
+|GPR_hxgdly|select1_from_4_hxgdly:inst3|selection:inst4
+y7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst2.IN0
+by => inst2.IN1
+by => inst4.IN1
+by => inst8.IN1
+by => inst11.IN1
+by => inst14.IN1
+by => inst17.IN1
+by => inst20.IN1
+by => inst23.IN1
+a7 => inst1.IN0
+ay => inst1.IN1
+ay => inst3.IN1
+ay => inst7.IN1
+ay => inst10.IN1
+ay => inst13.IN1
+ay => inst16.IN1
+ay => inst19.IN1
+ay => inst22.IN1
+y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst4.IN0
+a6 => inst3.IN0
+y5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst8.IN0
+a5 => inst7.IN0
+y4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst11.IN0
+a4 => inst10.IN0
+y3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst14.IN0
+a3 => inst13.IN0
+y2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst17.IN0
+a2 => inst16.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst20.IN0
+a1 => inst19.IN0
+y0 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst23.IN0
+a0 => inst22.IN0
+
+

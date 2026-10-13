@@ -1,0 +1,14 @@
+|alu_logic
+F <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+S0 => inst3.IN0
+S0 => inst11.IN0
+S0 => inst7.IN0
+A => inst5.IN0
+A => inst6.IN0
+A => inst4.IN0
+B => inst5.IN1
+B => inst4.IN1
+S1 => inst13.IN1
+S1 => inst.IN0
+
+

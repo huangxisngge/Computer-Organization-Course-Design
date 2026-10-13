@@ -1,0 +1,176 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 192 368)
+	(text "controlDecode_hxgdly" (rect 5 0 132 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 336 25 348)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "P_write" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "P_write" (rect 21 27 64 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "uIR[23..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "uIR[23..0]" (rect 21 43 74 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "ASEL[1..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "ASEL[1..0]" (rect 95 27 155 41)(font "Arial" (font_size 8)))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "BSEL[1..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "BSEL[1..0]" (rect 96 43 155 57)(font "Arial" (font_size 8)))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(port
+		(pt 176 64)
+		(output)
+		(text "CPR" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CPR" (rect 132 59 155 73)(font "Arial" (font_size 8)))
+		(line (pt 176 64)(pt 160 64))
+	)
+	(port
+		(pt 176 80)
+		(output)
+		(text "CPPC" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPPC" (rect 125 75 155 89)(font "Arial" (font_size 8)))
+		(line (pt 176 80)(pt 160 80))
+	)
+	(port
+		(pt 176 96)
+		(output)
+		(text "CPIR" (rect 0 0 25 14)(font "Arial" (font_size 8)))
+		(text "CPIR" (rect 130 91 155 105)(font "Arial" (font_size 8)))
+		(line (pt 176 96)(pt 160 96))
+	)
+	(port
+		(pt 176 112)
+		(output)
+		(text "CPMAR" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "CPMAR" (rect 113 107 155 121)(font "Arial" (font_size 8)))
+		(line (pt 176 112)(pt 160 112))
+	)
+	(port
+		(pt 176 128)
+		(output)
+		(text "ALU_M" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "ALU_M" (rect 114 123 155 137)(font "Arial" (font_size 8)))
+		(line (pt 176 128)(pt 160 128))
+	)
+	(port
+		(pt 176 144)
+		(output)
+		(text "ALU_S[3..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "ALU_S[3..0]" (rect 87 139 155 153)(font "Arial" (font_size 8)))
+		(line (pt 176 144)(pt 160 144)(line_width 3))
+	)
+	(port
+		(pt 176 160)
+		(output)
+		(text "CPMDR" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "CPMDR" (rect 114 155 155 169)(font "Arial" (font_size 8)))
+		(line (pt 176 160)(pt 160 160))
+	)
+	(port
+		(pt 176 176)
+		(output)
+		(text "CPXR" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "CPXR" (rect 124 171 155 185)(font "Arial" (font_size 8)))
+		(line (pt 176 176)(pt 160 176))
+	)
+	(port
+		(pt 176 192)
+		(output)
+		(text "CPSP" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPSP" (rect 125 187 155 201)(font "Arial" (font_size 8)))
+		(line (pt 176 192)(pt 160 192))
+	)
+	(port
+		(pt 176 208)
+		(output)
+		(text "C0" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "C0" (rect 140 203 155 217)(font "Arial" (font_size 8)))
+		(line (pt 176 208)(pt 160 208))
+	)
+	(port
+		(pt 176 224)
+		(output)
+		(text "HLT" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "HLT" (rect 133 219 155 233)(font "Arial" (font_size 8)))
+		(line (pt 176 224)(pt 160 224))
+	)
+	(port
+		(pt 176 240)
+		(output)
+		(text "EN_MDR" (rect 0 0 48 14)(font "Arial" (font_size 8)))
+		(text "EN_MDR" (rect 107 235 155 249)(font "Arial" (font_size 8)))
+		(line (pt 176 240)(pt 160 240))
+	)
+	(port
+		(pt 176 256)
+		(output)
+		(text "MEM_RD" (rect 0 0 49 14)(font "Arial" (font_size 8)))
+		(text "MEM_RD" (rect 106 251 155 265)(font "Arial" (font_size 8)))
+		(line (pt 176 256)(pt 160 256))
+	)
+	(port
+		(pt 176 272)
+		(output)
+		(text "MEM_WR" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "MEM_WR" (rect 102 267 155 281)(font "Arial" (font_size 8)))
+		(line (pt 176 272)(pt 160 272))
+	)
+	(port
+		(pt 176 288)
+		(output)
+		(text "SSEL[1..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "SSEL[1..0]" (rect 96 283 155 297)(font "Arial" (font_size 8)))
+		(line (pt 176 288)(pt 160 288)(line_width 3))
+	)
+	(port
+		(pt 176 304)
+		(output)
+		(text "SHIFT[1..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "SHIFT[1..0]" (rect 94 299 155 313)(font "Arial" (font_size 8)))
+		(line (pt 176 304)(pt 160 304)(line_width 3))
+	)
+	(port
+		(pt 176 320)
+		(output)
+		(text "NEXT[2..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "NEXT[2..0]" (rect 96 315 155 329)(font "Arial" (font_size 8)))
+		(line (pt 176 320)(pt 160 320)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 336))
+	)
+)
